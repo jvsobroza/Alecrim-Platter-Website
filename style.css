@@ -65,6 +65,9 @@
       letter-spacing: .08em; text-transform: uppercase;
       text-decoration: none; transition: background .25s;
     }
+    a.nav-logo {
+  text-decoration: none;
+}
     .nav-cta:hover { background: var(--green2); }
 
     /* ── NAV RESPONSIVO ── */

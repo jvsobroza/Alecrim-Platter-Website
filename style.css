@@ -1028,6 +1028,283 @@ footer {
   fill: white;
 }
 
+/* ── DIA DAS MÃES ── */
+
+/* Banner topo */
+.maes-banner {
+  background: linear-gradient(90deg, #b5466b 0%, #c96a8a 40%, #b5466b 100%);
+  padding: 0.6rem 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 201;
+}
+.maes-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.maes-banner-text {
+  color: white;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  font-weight: 300;
+}
+.maes-banner-text strong {
+  font-weight: 600;
+}
+.maes-banner-flowers {
+  font-size: 0.9rem;
+  animation: sway 3s ease-in-out infinite;
+}
+@keyframes sway {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+}
+
+/* Ajuste do nav para o banner */
+nav {
+  top: 36px;
+}
+
+/* Hero badge especial */
+.hero-badge {
+  color: #b5466b !important;
+  font-size: 1rem !important;
+  animation: fadeUp 0.9s ease both;
+}
+
+/* Botão Dia das Mães */
+.btn-maes {
+  background: linear-gradient(135deg, #b5466b, #c96a8a);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 18px rgba(181, 70, 107, 0.3);
+}
+.btn-maes:hover {
+  background: linear-gradient(135deg, #9e3059, #b5466b);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(181, 70, 107, 0.4);
+}
+
+/* Countdown */
+.hero-countdown {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 2.2rem;
+  animation: fadeUp 0.9s 0.5s ease both;
+}
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(181, 70, 107, 0.08);
+  border: 1px solid rgba(181, 70, 107, 0.2);
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  min-width: 64px;
+}
+.countdown-item span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #b5466b;
+  line-height: 1;
+}
+.countdown-item small {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+.countdown-sep {
+  color: rgba(181, 70, 107, 0.4);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.countdown-past {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #b5466b;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Seção destaque Dia das Mães */
+.maes-destaque {
+  background: linear-gradient(135deg, #fdf0f5 0%, #fce8f0 50%, #fdf4f8 100%);
+  padding: 5rem 3rem;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(181, 70, 107, 0.12);
+  border-bottom: 1px solid rgba(181, 70, 107, 0.12);
+}
+.maes-destaque::before {
+  content: "🌸";
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 5rem;
+  opacity: 0.12;
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+.maes-destaque::after {
+  content: "🌷";
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
+  font-size: 4rem;
+  opacity: 0.12;
+  transform: rotate(-10deg);
+  pointer-events: none;
+}
+.maes-destaque-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.maes-destaque-petals {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.petal {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  color: rgba(181, 70, 107, 0.18);
+}
+.petal-1 { transform: rotate(0deg) translateY(-28px); }
+.petal-2 { transform: rotate(72deg) translateY(-28px); }
+.petal-3 { transform: rotate(144deg) translateY(-28px); }
+.petal-4 { transform: rotate(216deg) translateY(-28px); }
+.petal-5 { transform: rotate(288deg) translateY(-28px); }
+.petal-center {
+  font-size: 2.4rem;
+  position: relative;
+  z-index: 2;
+  animation: rotateSlow 12s linear infinite;
+}
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.maes-destaque-content {
+  flex: 1;
+}
+.maes-destaque-tag {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: #b5466b;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8rem;
+}
+.maes-destaque-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  color: var(--green);
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+.maes-destaque-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #b5466b;
+}
+.maes-destaque-desc {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.maes-destaque-aviso {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: rgba(181, 70, 107, 0.06);
+  border: 1px solid rgba(181, 70, 107, 0.2);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.82rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+.maes-destaque-aviso strong {
+  color: #b5466b;
+}
+.btn-maes-lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: linear-gradient(135deg, #b5466b, #c96a8a);
+  color: white;
+  padding: 1rem 2.2rem;
+  border-radius: 3px;
+  font-family: "Jost", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: all 0.25s;
+  box-shadow: 0 4px 20px rgba(181, 70, 107, 0.3);
+  text-transform: uppercase;
+}
+.btn-maes-lg:hover {
+  background: linear-gradient(135deg, #9e3059, #b5466b);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(181, 70, 107, 0.4);
+}
+
+/* Petals flutuantes no hero */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 30% 20% at 15% 30%, rgba(181, 70, 107, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 25% 18% at 85% 25%, rgba(201, 106, 138, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Responsive destaque */
+@media (max-width: 900px) {
+  .maes-destaque {
+    padding: 3rem 1.5rem;
+  }
+  .maes-destaque-inner {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  .maes-destaque-aviso {
+    text-align: left;
+  }
+  nav {
+    top: 32px;
+  }
+  .maes-banner-text {
+    font-size: 0.7rem;
+  }
+}
+
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from {

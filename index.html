@@ -5,20 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alecrim Platters — Tábuas de Iguarias</title>
     <link rel="icon" type="image/png" href="img/logo.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-  <body>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PL5X01CMZ3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
+      gtag("config", "G-PL5X01CMZ3");
+    </script>
+  </head>
+  <body>
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal" id="modal">
         <button class="modal-close" id="modalClose">✕</button>
 
-        <div class="modal-img-wrap" id="modalImgWrap">
-        </div>
-        <div class="modal-carousel-controls" id="carouselControls" style="display: none;">
-          <button class="carousel-arrow carousel-prev" id="carouselPrev" aria-label="Foto anterior">‹</button>
+        <div class="modal-img-wrap" id="modalImgWrap"></div>
+        <div
+          class="modal-carousel-controls"
+          id="carouselControls"
+          style="display: none"
+        >
+          <button
+            class="carousel-arrow carousel-prev"
+            id="carouselPrev"
+            aria-label="Foto anterior"
+          >
+            ‹
+          </button>
           <div class="carousel-indicator" id="carouselIndicator">1/1</div>
-          <button class="carousel-arrow carousel-next" id="carouselNext" aria-label="Próxima foto">›</button>
+          <button
+            class="carousel-arrow carousel-next"
+            id="carouselNext"
+            aria-label="Próxima foto"
+          >
+            ›
+          </button>
         </div>
 
         <div class="modal-body">
@@ -39,8 +70,17 @@
 
           <div class="modal-cta">
             <span class="modal-photo-note" id="modalPhotoNote"></span>
-            <a id="modalWhatsapp" href="https://wa.me/5555996851842" target="_blank" class="modal-whatsapp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            <a
+              id="modalWhatsapp"
+              href="https://wa.me/5555996851842"
+              target="_blank"
+              class="modal-whatsapp"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                />
+              </svg>
               Pedir esse item
             </a>
           </div>
@@ -52,7 +92,10 @@
     <div class="maes-banner">
       <div class="maes-banner-inner">
         <span class="maes-banner-flowers">🌸</span>
-        <span class="maes-banner-text">Dia das Mães — <strong>10 de Maio</strong> · Surpreenda com um presente inesquecível · Faça seu pedido com antecedência</span>
+        <span class="maes-banner-text"
+          >Dia das Mães — <strong>10 de Maio</strong> · Surpreenda com um
+          presente inesquecível · Faça seu pedido com antecedência</span
+        >
         <span class="maes-banner-flowers">🌸</span>
       </div>
     </div>
@@ -60,7 +103,11 @@
     <!-- NAV -->
     <nav>
       <a href="#" class="nav-logo">
-        <img src="img/Alecrim_Platters.png" alt="Alecrim Platters Logo" class="nav-logo-img" />
+        <img
+          src="img/Alecrim_Platters.png"
+          alt="Alecrim Platters Logo"
+          class="nav-logo-img"
+        />
         <span class="nav-logo-text">Alecrim <span>Platters</span></span>
       </a>
       <ul class="nav-links">
@@ -69,8 +116,20 @@
         <li><a href="#cafes">Cafés & Brunch</a></li>
         <li><a href="#adicionais">Adicionais</a></li>
         <li>
-          <a href="https://www.instagram.com/alecrimplatters/" target="_blank" class="nav-instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px">
+          <a
+            href="https://www.instagram.com/alecrimplatters/"
+            target="_blank"
+            class="nav-instagram"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="width: 18px; height: 18px"
+            >
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -78,49 +137,105 @@
           </a>
         </li>
       </ul>
-      <a href="https://wa.me/5555996851842" target="_blank" class="nav-cta">Fazer Pedido</a>
+      <a href="https://wa.me/5555996851842" target="_blank" class="nav-cta"
+        >Fazer Pedido</a
+      >
     </nav>
 
     <!-- HERO -->
     <section class="hero">
       <div class="hero-bg"></div>
       <svg class="hero-leaf-left" viewBox="0 0 200 400" fill="none">
-        <path d="M100 400 C60 300 20 200 40 100 C60 20 120 0 140 40 C160 80 120 160 100 200 C80 240 60 300 100 400Z" fill="#2d5a27"/>
-        <path d="M100 400 C100 300 80 200 100 100" stroke="#2d5a27" stroke-width="2"/>
-        <path d="M100 300 C80 280 50 260 40 240" stroke="#2d5a27" stroke-width="1.5" opacity=".6"/>
-        <path d="M100 250 C80 230 60 220 55 200" stroke="#2d5a27" stroke-width="1.5" opacity=".6"/>
-        <path d="M100 350 C115 330 130 310 135 290" stroke="#2d5a27" stroke-width="1.5" opacity=".6"/>
+        <path
+          d="M100 400 C60 300 20 200 40 100 C60 20 120 0 140 40 C160 80 120 160 100 200 C80 240 60 300 100 400Z"
+          fill="#2d5a27"
+        />
+        <path
+          d="M100 400 C100 300 80 200 100 100"
+          stroke="#2d5a27"
+          stroke-width="2"
+        />
+        <path
+          d="M100 300 C80 280 50 260 40 240"
+          stroke="#2d5a27"
+          stroke-width="1.5"
+          opacity=".6"
+        />
+        <path
+          d="M100 250 C80 230 60 220 55 200"
+          stroke="#2d5a27"
+          stroke-width="1.5"
+          opacity=".6"
+        />
+        <path
+          d="M100 350 C115 330 130 310 135 290"
+          stroke="#2d5a27"
+          stroke-width="1.5"
+          opacity=".6"
+        />
       </svg>
       <svg class="hero-leaf-right" viewBox="0 0 200 400" fill="none">
-        <path d="M100 400 C60 300 20 200 40 100 C60 20 120 0 140 40 C160 80 120 160 100 200 C80 240 60 300 100 400Z" fill="#2d5a27"/>
-        <path d="M100 400 C100 300 80 200 100 100" stroke="#2d5a27" stroke-width="2"/>
+        <path
+          d="M100 400 C60 300 20 200 40 100 C60 20 120 0 140 40 C160 80 120 160 100 200 C80 240 60 300 100 400Z"
+          fill="#2d5a27"
+        />
+        <path
+          d="M100 400 C100 300 80 200 100 100"
+          stroke="#2d5a27"
+          stroke-width="2"
+        />
       </svg>
       <div class="hero-content">
         <div class="hero-badge">🌸 Especial Dia das Mães · 10 de Maio 🌸</div>
         <h1 class="hero-title">Alecrim<strong>Platters</strong></h1>
         <div class="hero-divider"><div class="hero-divider-icon">🌷</div></div>
-        <p class="hero-tagline">Presenteie sua mãe com uma experiência<br/>gastronômica única e feita com amor!</p>
+        <p class="hero-tagline">
+          Presenteie sua mãe com uma experiência<br />gastronômica única e feita
+          com amor!
+        </p>
         <div class="hero-btns">
           <a href="#platters" class="btn btn-green">Ver Cardápio</a>
-          <a href="https://wa.me/5555996851842" target="_blank" class="btn btn-maes">🌸 Pedir para o Dia das Mães</a>
+          <a
+            href="https://wa.me/5555996851842"
+            target="_blank"
+            class="btn btn-maes"
+            >🌸 Pedir para o Dia das Mães</a
+          >
         </div>
         <div class="hero-countdown" id="countdown">
-          <div class="countdown-item"><span id="cdDias">0</span><small>dias</small></div>
+          <div class="countdown-item">
+            <span id="cdDias">0</span><small>dias</small>
+          </div>
           <div class="countdown-sep">·</div>
-          <div class="countdown-item"><span id="cdHoras">0</span><small>horas</small></div>
+          <div class="countdown-item">
+            <span id="cdHoras">0</span><small>horas</small>
+          </div>
           <div class="countdown-sep">·</div>
-          <div class="countdown-item"><span id="cdMin">0</span><small>min</small></div>
+          <div class="countdown-item">
+            <span id="cdMin">0</span><small>min</small>
+          </div>
         </div>
       </div>
-      <div class="hero-scroll"><div class="scroll-line"></div>descobrir</div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        descobrir
+      </div>
     </section>
 
     <!-- SOBRE -->
     <section id="sobre">
       <div class="sobre-inner">
         <div class="sobre-tag">✦ Quem somos ✦</div>
-        <h2 class="sobre-title">Cada montagem é<br/><em>única e artesanal</em></h2>
-        <p class="sobre-desc">Na Alecrim Platters, cada tábua é criada com amor e atenção aos detalhes, unindo sabores cuidadosamente selecionados para criar experiências gastronômicas memoráveis. Neste Dia das Mães, presenteie com o que há de mais especial — uma montagem artesanal feita com todo o carinho que ela merece.</p>
+        <h2 class="sobre-title">
+          Cada montagem é<br /><em>única e artesanal</em>
+        </h2>
+        <p class="sobre-desc">
+          Na Alecrim Platters, cada tábua é criada com amor e atenção aos
+          detalhes, unindo sabores cuidadosamente selecionados para criar
+          experiências gastronômicas memoráveis. Neste Dia das Mães, presenteie
+          com o que há de mais especial — uma montagem artesanal feita com todo
+          o carinho que ela merece.
+        </p>
         <div class="sobre-pills">
           <span class="pill">🌸 Presente perfeito</span>
           <span class="pill">🚚 Entrega Combinada</span>
@@ -134,22 +249,78 @@
     <section class="maes-destaque">
       <div class="maes-destaque-inner">
         <div class="maes-destaque-petals">
-          <svg class="petal petal-1" viewBox="0 0 60 80"><ellipse cx="30" cy="40" rx="18" ry="36" fill="currentColor" transform="rotate(-20 30 40)"/></svg>
-          <svg class="petal petal-2" viewBox="0 0 60 80"><ellipse cx="30" cy="40" rx="18" ry="36" fill="currentColor" transform="rotate(20 30 40)"/></svg>
-          <svg class="petal petal-3" viewBox="0 0 60 80"><ellipse cx="30" cy="40" rx="18" ry="36" fill="currentColor" transform="rotate(60 30 40)"/></svg>
-          <svg class="petal petal-4" viewBox="0 0 60 80"><ellipse cx="30" cy="40" rx="18" ry="36" fill="currentColor" transform="rotate(-60 30 40)"/></svg>
+          <svg class="petal petal-1" viewBox="0 0 60 80">
+            <ellipse
+              cx="30"
+              cy="40"
+              rx="18"
+              ry="36"
+              fill="currentColor"
+              transform="rotate(-20 30 40)"
+            />
+          </svg>
+          <svg class="petal petal-2" viewBox="0 0 60 80">
+            <ellipse
+              cx="30"
+              cy="40"
+              rx="18"
+              ry="36"
+              fill="currentColor"
+              transform="rotate(20 30 40)"
+            />
+          </svg>
+          <svg class="petal petal-3" viewBox="0 0 60 80">
+            <ellipse
+              cx="30"
+              cy="40"
+              rx="18"
+              ry="36"
+              fill="currentColor"
+              transform="rotate(60 30 40)"
+            />
+          </svg>
+          <svg class="petal petal-4" viewBox="0 0 60 80">
+            <ellipse
+              cx="30"
+              cy="40"
+              rx="18"
+              ry="36"
+              fill="currentColor"
+              transform="rotate(-60 30 40)"
+            />
+          </svg>
           <div class="petal-center">🌸</div>
         </div>
         <div class="maes-destaque-content">
           <div class="maes-destaque-tag">✦ 10 de Maio ✦</div>
           <h2 class="maes-destaque-title">Dia das <em>Mães</em></h2>
-          <p class="maes-destaque-desc">Uma montagem especial para homenagear quem você mais ama. Escolha o platter perfeito e deixe que a gente cuide de tornar esse momento inesquecível — com ingredientes premium, apresentação artesanal e todo o carinho que ela merece.</p>
+          <p class="maes-destaque-desc">
+            Uma montagem especial para homenagear quem você mais ama. Escolha o
+            platter perfeito e deixe que a gente cuide de tornar esse momento
+            inesquecível — com ingredientes premium, apresentação artesanal e
+            todo o carinho que ela merece.
+          </p>
           <div class="maes-destaque-aviso">
             <span>📅</span>
-            <span>Faça seu pedido com <strong>pelo menos 3 dias de antecedência</strong> para garantir a entrega no dia 10 de maio.</span>
+            <span
+              >Faça seu pedido com
+              <strong>pelo menos 3 dias de antecedência</strong> para garantir a
+              entrega no dia 10 de maio.</span
+            >
           </div>
-          <a href="https://wa.me/5555996851842?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20especial%20para%20o%20Dia%20das%20Mães%20(10%20de%20maio)!" target="_blank" class="btn btn-maes-lg">
-            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:white;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <a
+            href="https://wa.me/5555996851842?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20especial%20para%20o%20Dia%20das%20Mães%20(10%20de%20maio)!"
+            target="_blank"
+            class="btn btn-maes-lg"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              style="width: 18px; height: 18px; fill: white; flex-shrink: 0"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+              />
+            </svg>
             Pedir Presente para o Dia das Mães
           </a>
         </div>
@@ -159,73 +330,283 @@
     <section id="platters">
       <div class="section-wrap">
         <div class="section-header">
-          <span class="section-eyebrow">🌸 Presenteie com sabor e carinho 🌸</span>
+          <span class="section-eyebrow"
+            >🌸 Presenteie com sabor e carinho 🌸</span
+          >
           <h2 class="section-title">Escolha o Platter Ideal</h2>
-          <p class="section-sub">Selecione o presente perfeito para o Dia das Mães. Clique em qualquer platter para ver os detalhes.</p>
+          <p class="section-sub">
+            Selecione o presente perfeito para o Dia das Mães. Clique em
+            qualquer platter para ver os detalhes.
+          </p>
         </div>
         <div class="platters-grid">
-
-          <div class="platter-card" onclick="openModal({name:'Litha',price:'R$ 120,00',serves:'Serve 1 pessoa',category:'Platter',img:'img/platters/litha/litha.jpeg',icon:'🌿',desc:'Charcutaria 1 tipo, queijo 2 tipos, azeitonas importadas, tomates cereja, mix de nuts, frutas secas, frutas frescas, geleia especial da casa e torradas especiais.',ingredients:['Charcutaria','Queijo (2 tipos)','Azeitonas importadas','Tomates cereja','Mix de nuts','Frutas secas','Frutas frescas','Geleia especial','Torradas especiais']})">
+          <div
+            class="platter-card"
+            onclick="
+              openModal({
+                name: 'Litha',
+                price: 'R$ 120,00',
+                serves: 'Serve 1 pessoa',
+                category: 'Platter',
+                img: 'img/platters/litha/litha.jpeg',
+                icon: '🌿',
+                desc: 'Charcutaria 1 tipo, queijo 2 tipos, azeitonas importadas, tomates cereja, mix de nuts, frutas secas, frutas frescas, geleia especial da casa e torradas especiais.',
+                ingredients: [
+                  'Charcutaria',
+                  'Queijo (2 tipos)',
+                  'Azeitonas importadas',
+                  'Tomates cereja',
+                  'Mix de nuts',
+                  'Frutas secas',
+                  'Frutas frescas',
+                  'Geleia especial',
+                  'Torradas especiais',
+                ],
+              })
+            "
+          >
             <div class="platter-card-top">
               <div class="platter-name">Litha</div>
               <div class="platter-serves">Serve 1 pessoa</div>
               <div class="platter-price">R$ 120</div>
             </div>
             <div class="platter-card-body">
-              <p class="platter-desc">Charcutaria 1 tipo, queijo 2 tipos, azeitonas importadas, tomates cereja, mix de nuts, frutas secas, frutas frescas, geleia especial da casa e torradas especiais.</p>
+              <p class="platter-desc">
+                Charcutaria 1 tipo, queijo 2 tipos, azeitonas importadas,
+                tomates cereja, mix de nuts, frutas secas, frutas frescas,
+                geleia especial da casa e torradas especiais.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
 
-          <div class="platter-card" onclick="openModal({name:'Mabon',price:'R$ 150,00',serves:'Serve 2 a 3 pessoas',category:'Platter',img:['img/platters/mabon/mabon_01.jpeg', 'img/platters/mabon/mabon_02.jpeg', 'img/platters/mabon/mabon_03.jpeg'],icon:'🍂',desc:'Charcutaria 2 tipos, queijos 2 tipos, azeitonas importadas, tomate cereja com cream cheese, mix de nuts, frutas secas, frutas frescas, geleia especial da casa e torradas especiais.',ingredients:['Charcutaria (2 tipos)','Queijo (2 tipos)','Azeitonas importadas','Tomate cereja com cream cheese','Mix de nuts','Frutas secas','Frutas frescas','Geleia especial','Torradas especiais']})">
+          <div
+            class="platter-card"
+            onclick="
+              openModal({
+                name: 'Mabon',
+                price: 'R$ 150,00',
+                serves: 'Serve 2 a 3 pessoas',
+                category: 'Platter',
+                img: [
+                  'img/platters/mabon/mabon_01.jpeg',
+                  'img/platters/mabon/mabon_02.jpeg',
+                  'img/platters/mabon/mabon_03.jpeg',
+                ],
+                icon: '🍂',
+                desc: 'Charcutaria 2 tipos, queijos 2 tipos, azeitonas importadas, tomate cereja com cream cheese, mix de nuts, frutas secas, frutas frescas, geleia especial da casa e torradas especiais.',
+                ingredients: [
+                  'Charcutaria (2 tipos)',
+                  'Queijo (2 tipos)',
+                  'Azeitonas importadas',
+                  'Tomate cereja com cream cheese',
+                  'Mix de nuts',
+                  'Frutas secas',
+                  'Frutas frescas',
+                  'Geleia especial',
+                  'Torradas especiais',
+                ],
+              })
+            "
+          >
             <div class="platter-card-top">
               <div class="platter-name">Mabon</div>
               <div class="platter-serves">Serve 2 a 3 pessoas</div>
               <div class="platter-price">R$ 150</div>
             </div>
             <div class="platter-card-body">
-              <p class="platter-desc">Charcutaria 2 tipos, queijos 2 tipos, azeitonas importadas, tomate cereja com cream cheese, mix de nuts, frutas secas, frutas frescas, geleia especial da casa e torradas especiais.</p>
+              <p class="platter-desc">
+                Charcutaria 2 tipos, queijos 2 tipos, azeitonas importadas,
+                tomate cereja com cream cheese, mix de nuts, frutas secas,
+                frutas frescas, geleia especial da casa e torradas especiais.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
 
-          <div class="platter-card" onclick="openModal({name:'Flor de Alecrim',price:'R$ 205,00',serves:'Serve 4 pessoas',category:'Platter',img:'img/platters/flor/flor_alecrim.jpeg',icon:'🌸',desc:'Charcutaria 3 tipos, queijo 4 tipos incluído Brie, tomate cereja com cream cheese, espetinho caprese com mussarela de búfala, canapé de damasco, azeitonas importadas, mix de nuts, frutas secas, frutas frescas, geleia especial da casa, stick de mel, pastinha da casa e torradas especiais.',ingredients:['Charcutaria (3 tipos)','Queijo (4 tipos + Brie)','Tomate cereja com cream cheese','Espetinho caprese','Canapé de damasco','Azeitonas importadas','Mix de nuts','Frutas secas','Frutas frescas','Geleia especial','Stick de mel','Pastinha da casa','Torradas especiais']})">
+          <div
+            class="platter-card"
+            onclick="
+              openModal({
+                name: 'Flor de Alecrim',
+                price: 'R$ 205,00',
+                serves: 'Serve 4 pessoas',
+                category: 'Platter',
+                img: 'img/platters/flor/flor_alecrim.jpeg',
+                icon: '🌸',
+                desc: 'Charcutaria 3 tipos, queijo 4 tipos incluído Brie, tomate cereja com cream cheese, espetinho caprese com mussarela de búfala, canapé de damasco, azeitonas importadas, mix de nuts, frutas secas, frutas frescas, geleia especial da casa, stick de mel, pastinha da casa e torradas especiais.',
+                ingredients: [
+                  'Charcutaria (3 tipos)',
+                  'Queijo (4 tipos + Brie)',
+                  'Tomate cereja com cream cheese',
+                  'Espetinho caprese',
+                  'Canapé de damasco',
+                  'Azeitonas importadas',
+                  'Mix de nuts',
+                  'Frutas secas',
+                  'Frutas frescas',
+                  'Geleia especial',
+                  'Stick de mel',
+                  'Pastinha da casa',
+                  'Torradas especiais',
+                ],
+              })
+            "
+          >
             <div class="platter-card-top">
               <div class="platter-name">Flor de Alecrim</div>
               <div class="platter-serves">Serve 4 pessoas</div>
               <div class="platter-price">R$ 205</div>
             </div>
             <div class="platter-card-body">
-              <p class="platter-desc">Charcutaria 3 tipos, queijo 4 tipos incluído Brie, tomate cereja com cream cheese, espetinho caprese com mussarela de búfala, canapé de damasco, azeitonas importadas, mix de nuts, frutas secas, frutas frescas, geleia especial da casa, stick de mel, pastinha da casa e torradas especiais.</p>
+              <p class="platter-desc">
+                Charcutaria 3 tipos, queijo 4 tipos incluído Brie, tomate cereja
+                com cream cheese, espetinho caprese com mussarela de búfala,
+                canapé de damasco, azeitonas importadas, mix de nuts, frutas
+                secas, frutas frescas, geleia especial da casa, stick de mel,
+                pastinha da casa e torradas especiais.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
 
-          <div class="platter-card" onclick="openModal({name:'Ostara',price:'R$ 270,00',serves:'Serve 5 a 6 pessoas',category:'Platter',img:['img/platters/ostara/ostara_01.jpeg', 'img/platters/ostara/ostara_02.jpeg'],icon:'🌷',desc:'Charcutaria 4 tipos, queijos 4 tipos incluído Brie, ovos de codorna, azeitonas importadas, tomate cereja com cream cheese, canapés de tâmara, canapés de damasco, mix de nuts, frutas secas, frutas frescas, geleia especial da casa, stick de mel, espetinho caprese com mussarela de búfala, pastinha da casa e torradas especiais.',ingredients:['Charcutaria (4 tipos)','Queijo (4 tipos + Brie)','Ovos de codorna','Azeitonas importadas','Tomate cereja com cream cheese','Canapés de tâmara','Canapés de damasco','Mix de nuts','Frutas secas','Frutas frescas','Geleia especial','Stick de mel','Espetinho caprese','Pastinha da casa','Torradas especiais']})">
+          <div
+            class="platter-card"
+            onclick="
+              openModal({
+                name: 'Ostara',
+                price: 'R$ 270,00',
+                serves: 'Serve 5 a 6 pessoas',
+                category: 'Platter',
+                img: [
+                  'img/platters/ostara/ostara_01.jpeg',
+                  'img/platters/ostara/ostara_02.jpeg',
+                ],
+                icon: '🌷',
+                desc: 'Charcutaria 4 tipos, queijos 4 tipos incluído Brie, ovos de codorna, azeitonas importadas, tomate cereja com cream cheese, canapés de tâmara, canapés de damasco, mix de nuts, frutas secas, frutas frescas, geleia especial da casa, stick de mel, espetinho caprese com mussarela de búfala, pastinha da casa e torradas especiais.',
+                ingredients: [
+                  'Charcutaria (4 tipos)',
+                  'Queijo (4 tipos + Brie)',
+                  'Ovos de codorna',
+                  'Azeitonas importadas',
+                  'Tomate cereja com cream cheese',
+                  'Canapés de tâmara',
+                  'Canapés de damasco',
+                  'Mix de nuts',
+                  'Frutas secas',
+                  'Frutas frescas',
+                  'Geleia especial',
+                  'Stick de mel',
+                  'Espetinho caprese',
+                  'Pastinha da casa',
+                  'Torradas especiais',
+                ],
+              })
+            "
+          >
             <div class="platter-card-top">
               <div class="platter-name">Ostara</div>
               <div class="platter-serves">Serve 5 a 6 pessoas</div>
               <div class="platter-price">R$ 270</div>
             </div>
             <div class="platter-card-body">
-              <p class="platter-desc">Charcutaria 4 tipos, queijos 4 tipos incluído Brie, ovos de codorna, azeitonas importadas, tomate cereja com cream cheese, canapés de tâmara e de damasco, mix de nuts, frutas secas, frutas frescas, geleia especial da casa, stick de mel, espetinho caprese com mussarela de búfala, pastinha da casa e torradas especiais.</p>
+              <p class="platter-desc">
+                Charcutaria 4 tipos, queijos 4 tipos incluído Brie, ovos de
+                codorna, azeitonas importadas, tomate cereja com cream cheese,
+                canapés de tâmara e de damasco, mix de nuts, frutas secas,
+                frutas frescas, geleia especial da casa, stick de mel, espetinho
+                caprese com mussarela de búfala, pastinha da casa e torradas
+                especiais.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
 
-          <div class="platter-card" onclick="openModal({name:'Yule',price:'R$ 360,00',serves:'Serve 7 a 8 pessoas',category:'Platter',img:['img/platters/yule/yule_01.jpeg', 'img/platters/yule/yule_02.jpeg'],icon:'❄️',desc:'Charcutarias 4 tipos, queijos 4 tipos incluindo Brie, canapés de damasco, canapés de tâmara, tomate cereja com cream cheese, azeitonas importadas, mix de nuts, frutas secas, frutas frescas, espetinho caprese com mussarela de búfala, geleia especial da casa, stick de mel, pastinhas da casa e torradas especiais.',ingredients:['Charcutaria (4 tipos)','Queijo (4 tipos + Brie)','Canapés de damasco','Canapés de tâmara','Tomate cereja com cream cheese','Azeitonas importadas','Mix de nuts','Frutas secas','Frutas frescas','Espetinho caprese','Geleia especial','Stick de mel','Pastinhas da casa','Torradas especiais']})">
+          <div
+            class="platter-card"
+            onclick="
+              openModal({
+                name: 'Yule',
+                price: 'R$ 360,00',
+                serves: 'Serve 7 a 8 pessoas',
+                category: 'Platter',
+                img: [
+                  'img/platters/yule/yule_01.jpeg',
+                  'img/platters/yule/yule_02.jpeg',
+                ],
+                icon: '❄️',
+                desc: 'Charcutarias 4 tipos, queijos 4 tipos incluindo Brie, canapés de damasco, canapés de tâmara, tomate cereja com cream cheese, azeitonas importadas, mix de nuts, frutas secas, frutas frescas, espetinho caprese com mussarela de búfala, geleia especial da casa, stick de mel, pastinhas da casa e torradas especiais.',
+                ingredients: [
+                  'Charcutaria (4 tipos)',
+                  'Queijo (4 tipos + Brie)',
+                  'Canapés de damasco',
+                  'Canapés de tâmara',
+                  'Tomate cereja com cream cheese',
+                  'Azeitonas importadas',
+                  'Mix de nuts',
+                  'Frutas secas',
+                  'Frutas frescas',
+                  'Espetinho caprese',
+                  'Geleia especial',
+                  'Stick de mel',
+                  'Pastinhas da casa',
+                  'Torradas especiais',
+                ],
+              })
+            "
+          >
             <div class="platter-card-top">
               <div class="platter-name">Yule</div>
               <div class="platter-serves">Serve 7 a 8 pessoas</div>
               <div class="platter-price">R$ 360</div>
             </div>
             <div class="platter-card-body">
-              <p class="platter-desc">Charcutarias 4 tipos, queijos 4 tipos incluindo Brie, canapés de damasco, canapés de tâmara, tomate cereja com cream cheese, azeitonas importadas, mix de nuts, frutas secas, frutas frescas, espetinho caprese com mussarela de búfala, geleia especial da casa, stick de mel, pastinhas da casa e torradas especiais.</p>
+              <p class="platter-desc">
+                Charcutarias 4 tipos, queijos 4 tipos incluindo Brie, canapés de
+                damasco, canapés de tâmara, tomate cereja com cream cheese,
+                azeitonas importadas, mix de nuts, frutas secas, frutas frescas,
+                espetinho caprese com mussarela de búfala, geleia especial da
+                casa, stick de mel, pastinhas da casa e torradas especiais.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
 
-          <div class="platter-card featured" onclick="openModal({name:'Beltane',price:'R$ 480,00',serves:'Serve 10 a 12 pessoas',category:'Platter',img:['img/platters/beltane/beltane_01.jpeg', 'img/platters/beltane/beltane_02.jpeg', 'img/platters/beltane/beltane_03.jpeg'],icon:'🔥',desc:'Charcutaria 4 tipos, queijos 4 tipos incluído Brie, canapés de damasco, canapés de tâmara, tomate cereja com cream cheese, espetinho caprese com mussarela de búfala, azeitona importada, ovos de codorna, mix de nuts, frutas secas, frutas frescas, pastinhas da casa, torradinhas, geleia especial da casa, stick de mel e torradas especiais.',ingredients:['Charcutaria (4 tipos)','Queijo (4 tipos + Brie)','Canapés de damasco','Canapés de tâmara','Tomate cereja com cream cheese','Espetinho caprese','Azeitona importada','Ovos de codorna','Mix de nuts','Frutas secas','Frutas frescas','Pastinhas da casa','Geleia especial','Stick de mel','Torradas especiais']})">
+          <div
+            class="platter-card featured"
+            onclick="
+              openModal({
+                name: 'Beltane',
+                price: 'R$ 480,00',
+                serves: 'Serve 10 a 12 pessoas',
+                category: 'Platter',
+                img: [
+                  'img/platters/beltane/beltane_01.jpeg',
+                  'img/platters/beltane/beltane_02.jpeg',
+                  'img/platters/beltane/beltane_03.jpeg',
+                ],
+                icon: '🔥',
+                desc: 'Charcutaria 4 tipos, queijos 4 tipos incluído Brie, canapés de damasco, canapés de tâmara, tomate cereja com cream cheese, espetinho caprese com mussarela de búfala, azeitona importada, ovos de codorna, mix de nuts, frutas secas, frutas frescas, pastinhas da casa, torradinhas, geleia especial da casa, stick de mel e torradas especiais.',
+                ingredients: [
+                  'Charcutaria (4 tipos)',
+                  'Queijo (4 tipos + Brie)',
+                  'Canapés de damasco',
+                  'Canapés de tâmara',
+                  'Tomate cereja com cream cheese',
+                  'Espetinho caprese',
+                  'Azeitona importada',
+                  'Ovos de codorna',
+                  'Mix de nuts',
+                  'Frutas secas',
+                  'Frutas frescas',
+                  'Pastinhas da casa',
+                  'Geleia especial',
+                  'Stick de mel',
+                  'Torradas especiais',
+                ],
+              })
+            "
+          >
             <div class="featured-badge">⭐ Mais Pedido</div>
             <div class="platter-card-top">
               <div class="platter-name">Beltane</div>
@@ -233,11 +614,17 @@
               <div class="platter-price">R$ 480</div>
             </div>
             <div class="platter-card-body">
-              <p class="platter-desc">Charcutaria 4 tipos, queijos 4 tipos incluído Brie, canapés de damasco, canapés de tâmara, tomate cereja com cream cheese, espetinho caprese com mussarela de búfala, azeitona importada, ovos de codorna, mix de nuts, frutas secas, frutas frescas, pastinhas da casa, torradinhas, geleia especial da casa, stick de mel e torradas especiais.</p>
+              <p class="platter-desc">
+                Charcutaria 4 tipos, queijos 4 tipos incluído Brie, canapés de
+                damasco, canapés de tâmara, tomate cereja com cream cheese,
+                espetinho caprese com mussarela de búfala, azeitona importada,
+                ovos de codorna, mix de nuts, frutas secas, frutas frescas,
+                pastinhas da casa, torradinhas, geleia especial da casa, stick
+                de mel e torradas especiais.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -250,48 +637,217 @@
           <p class="section-sub">Clique para ver os detalhes de cada opção.</p>
         </div>
         <div class="cafes-grid">
-
-          <div class="cafe-card" onclick="openModal({name:'Mini Café',price:'R$ 100,00',serves:'Serve 1 pessoa',category:'Café',img:['img/cafes/mini/mini_01.jpeg', 'img/cafes/mini/mini_02.jpeg'],icon:'☕',desc:'Um croissant, um mini bolo, suco 300ml, drip café, geleia ou doce de leite, torradinhas, queijo e salame, uva, salada de frutas e uma caixa craft presenteável.',ingredients:['Croissant','Mini bolo','Suco 300ml','Drip café','Geleia ou doce de leite','Torradinhas','Queijo e salame','Uva','Salada de frutas','Caixa craft presenteável']})">
+          <div
+            class="cafe-card"
+            onclick="
+              openModal({
+                name: 'Mini Café',
+                price: 'R$ 100,00',
+                serves: 'Serve 1 pessoa',
+                category: 'Café',
+                img: [
+                  'img/cafes/mini/mini_01.jpeg',
+                  'img/cafes/mini/mini_02.jpeg',
+                ],
+                icon: '☕',
+                desc: 'Um croissant, um mini bolo, suco 300ml, drip café, geleia ou doce de leite, torradinhas, queijo e salame, uva, salada de frutas e uma caixa craft presenteável.',
+                ingredients: [
+                  'Croissant',
+                  'Mini bolo',
+                  'Suco 300ml',
+                  'Drip café',
+                  'Geleia ou doce de leite',
+                  'Torradinhas',
+                  'Queijo e salame',
+                  'Uva',
+                  'Salada de frutas',
+                  'Caixa craft presenteável',
+                ],
+              })
+            "
+          >
             <div class="cafe-accent"></div>
             <div class="cafe-content">
               <div class="cafe-name">Mini Café</div>
-              <div class="cafe-meta"><span class="cafe-price">R$ 100,00</span><span class="cafe-serves">Serve 1 pessoa</span></div>
-              <p class="cafe-desc">Um croissant, um mini bolo, suco 300ml, drip café, geleia ou doce de leite, torradinhas, queijo e salame, uva, salada de frutas e uma caixa craft presenteável.</p>
+              <div class="cafe-meta">
+                <span class="cafe-price">R$ 100,00</span
+                ><span class="cafe-serves">Serve 1 pessoa</span>
+              </div>
+              <p class="cafe-desc">
+                Um croissant, um mini bolo, suco 300ml, drip café, geleia ou
+                doce de leite, torradinhas, queijo e salame, uva, salada de
+                frutas e uma caixa craft presenteável.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
 
-          <div class="cafe-card" onclick="openModal({name:'Café Premium',price:'R$ 155,00',serves:'Serve 2 pessoas',category:'Café',img:['img/cafes/premium/premium_01.jpeg', 'img/cafes/premium/premium_02.jpeg'],icon:'☕',desc:'Bolinho artesanal, waffle, pão de queijo, torradas, pão de mel, bolachas amanteigadas, suco 300ml, drip café, queijo, salame e lombo canadense, uvas, manteiga, doce de leite ou geleia, salada de frutas, iogurte natural com granola, brownie, ovos mexidos e caixa em pinus presenteável.',ingredients:['Bolinho artesanal','Waffle','Pão de queijo','Pão de mel','Bolachas amanteigadas','Suco 300ml','Drip café','Queijo, salame e lombo canadense','Uvas','Manteiga','Doce de leite ou geleia','Salada de frutas','Iogurte com granola','Brownie','Ovos mexidos','Caixa em pinus']})">
+          <div
+            class="cafe-card"
+            onclick="
+              openModal({
+                name: 'Café Premium',
+                price: 'R$ 155,00',
+                serves: 'Serve 2 pessoas',
+                category: 'Café',
+                img: [
+                  'img/cafes/premium/premium_01.jpeg',
+                  'img/cafes/premium/premium_02.jpeg',
+                ],
+                icon: '☕',
+                desc: 'Bolinho artesanal, waffle, pão de queijo, torradas, pão de mel, bolachas amanteigadas, suco 300ml, drip café, queijo, salame e lombo canadense, uvas, manteiga, doce de leite ou geleia, salada de frutas, iogurte natural com granola, brownie, ovos mexidos e caixa em pinus presenteável.',
+                ingredients: [
+                  'Bolinho artesanal',
+                  'Waffle',
+                  'Pão de queijo',
+                  'Pão de mel',
+                  'Bolachas amanteigadas',
+                  'Suco 300ml',
+                  'Drip café',
+                  'Queijo, salame e lombo canadense',
+                  'Uvas',
+                  'Manteiga',
+                  'Doce de leite ou geleia',
+                  'Salada de frutas',
+                  'Iogurte com granola',
+                  'Brownie',
+                  'Ovos mexidos',
+                  'Caixa em pinus',
+                ],
+              })
+            "
+          >
             <div class="cafe-accent"></div>
             <div class="cafe-content">
               <div class="cafe-name">Café Premium</div>
-              <div class="cafe-meta"><span class="cafe-price">R$ 155,00</span><span class="cafe-serves">Serve 2 pessoas</span></div>
-              <p class="cafe-desc">Bolinho artesanal, waffle, pão de queijo, torradas, pão de mel, bolachas amanteigadas, suco 300ml, drip café, queijo, salame e lombo canadense, uvas, manteiga, doce de leite ou geleia, salada de frutas, iogurte natural com granola, brownie, ovos mexidos e caixa em pinus presenteável.</p>
+              <div class="cafe-meta">
+                <span class="cafe-price">R$ 155,00</span
+                ><span class="cafe-serves">Serve 2 pessoas</span>
+              </div>
+              <p class="cafe-desc">
+                Bolinho artesanal, waffle, pão de queijo, torradas, pão de mel,
+                bolachas amanteigadas, suco 300ml, drip café, queijo, salame e
+                lombo canadense, uvas, manteiga, doce de leite ou geleia, salada
+                de frutas, iogurte natural com granola, brownie, ovos mexidos e
+                caixa em pinus presenteável.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
 
-          <div class="cafe-card" onclick="openModal({name:'Café Luxo',price:'R$ 215,00',serves:'Serve 3 pessoas',category:'Café',img:'img/cafes/luxo/luxo_01.jpeg',icon:'✨',desc:'Bolinhos artesanais, waffles, stroopewafle, pães de queijo, torradas, pão de mel, bolachinhas amanteigadas, suco 500ml, drip café, queijo, salame e lombo canadense, uvas, manteiga, doce de leite, geleia da casa, croissant, salada de frutas, iogurte natural com granola, brownie, ovos mexidos e caixa presenteável em pinus.',ingredients:['Bolinhos artesanais','Waffles','Stroopewafle','Pães de queijo','Pão de mel','Bolachinhas amanteigadas','Suco 500ml','Drip café','Queijo, salame e lombo canadense','Uvas','Manteiga','Doce de leite','Geleia da casa','Croissant','Salada de frutas','Iogurte com granola','Brownie','Ovos mexidos','Caixa em pinus']})">
+          <div
+            class="cafe-card"
+            onclick="
+              openModal({
+                name: 'Café Luxo',
+                price: 'R$ 215,00',
+                serves: 'Serve 3 pessoas',
+                category: 'Café',
+                img: 'img/cafes/luxo/luxo_01.jpeg',
+                icon: '✨',
+                desc: 'Bolinhos artesanais, waffles, stroopewafle, pães de queijo, torradas, pão de mel, bolachinhas amanteigadas, suco 500ml, drip café, queijo, salame e lombo canadense, uvas, manteiga, doce de leite, geleia da casa, croissant, salada de frutas, iogurte natural com granola, brownie, ovos mexidos e caixa presenteável em pinus.',
+                ingredients: [
+                  'Bolinhos artesanais',
+                  'Waffles',
+                  'Stroopewafle',
+                  'Pães de queijo',
+                  'Pão de mel',
+                  'Bolachinhas amanteigadas',
+                  'Suco 500ml',
+                  'Drip café',
+                  'Queijo, salame e lombo canadense',
+                  'Uvas',
+                  'Manteiga',
+                  'Doce de leite',
+                  'Geleia da casa',
+                  'Croissant',
+                  'Salada de frutas',
+                  'Iogurte com granola',
+                  'Brownie',
+                  'Ovos mexidos',
+                  'Caixa em pinus',
+                ],
+              })
+            "
+          >
             <div class="cafe-accent"></div>
             <div class="cafe-content">
               <div class="cafe-name">Café Luxo</div>
-              <div class="cafe-meta"><span class="cafe-price">R$ 215,00</span><span class="cafe-serves">Serve 3 pessoas</span></div>
-              <p class="cafe-desc">Bolinhos artesanais, waffles, stroopewafle, pães de queijo, torradas, pão de mel, bolachinhas amanteigadas, suco 500ml, drip café, queijo, salame e lombo canadense, uvas, manteiga, doce de leite, geleia da casa, croissant, salada de frutas, iogurte natural com granola, brownie, ovos mexidos e caixa presenteável em pinus.</p>
+              <div class="cafe-meta">
+                <span class="cafe-price">R$ 215,00</span
+                ><span class="cafe-serves">Serve 3 pessoas</span>
+              </div>
+              <p class="cafe-desc">
+                Bolinhos artesanais, waffles, stroopewafle, pães de queijo,
+                torradas, pão de mel, bolachinhas amanteigadas, suco 500ml, drip
+                café, queijo, salame e lombo canadense, uvas, manteiga, doce de
+                leite, geleia da casa, croissant, salada de frutas, iogurte
+                natural com granola, brownie, ovos mexidos e caixa presenteável
+                em pinus.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
 
-          <div class="cafe-card brunch" onclick="openModal({name:'Brunch',price:'R$ 85,00 / pessoa',serves:'Mínimo 5 pessoas',category:'Brunch',img:['img/cafes/brunch/brunch_01.jpeg', 'img/cafes/brunch/brunch_02.jpeg', 'img/cafes/brunch/brunch_03.jpeg', 'img/cafes/brunch/brunch_04.jpeg',
-            'img/cafes/brunch/brunch_05.jpeg', 'img/cafes/brunch/brunch_06.jpeg'],icon:'🥂',desc:'Bolos artesanais, pães de queijo, bolo salgado, empadinhas artesanais, pão de mel, croissant, sanduíches especiais, cuca da casa, fatias húngaras, rocambole salgado, focaccia, torradas especiais, salada de frutas, suco, drip café, charcutarias, queijos especiais, geleias da casa e caponata.',ingredients:['Bolos artesanais','Pães de queijo','Bolo salgado','Empadinhas artesanais','Pão de mel','Croissant','Sanduíches especiais','Cuca da casa','Fatias húngaras','Rocambole salgado','Focaccia','Torradas especiais','Salada de frutas','Suco','Drip café','Charcutarias','Queijos especiais','Geleias da casa','Caponata']})">
+          <div
+            class="cafe-card brunch"
+            onclick="
+              openModal({
+                name: 'Brunch',
+                price: 'R$ 85,00 / pessoa',
+                serves: 'Mínimo 5 pessoas',
+                category: 'Brunch',
+                img: [
+                  'img/cafes/brunch/brunch_01.jpeg',
+                  'img/cafes/brunch/brunch_02.jpeg',
+                  'img/cafes/brunch/brunch_03.jpeg',
+                  'img/cafes/brunch/brunch_04.jpeg',
+                  'img/cafes/brunch/brunch_05.jpeg',
+                  'img/cafes/brunch/brunch_06.jpeg',
+                ],
+                icon: '🥂',
+                desc: 'Bolos artesanais, pães de queijo, bolo salgado, empadinhas artesanais, pão de mel, croissant, sanduíches especiais, cuca da casa, fatias húngaras, rocambole salgado, focaccia, torradas especiais, salada de frutas, suco, drip café, charcutarias, queijos especiais, geleias da casa e caponata.',
+                ingredients: [
+                  'Bolos artesanais',
+                  'Pães de queijo',
+                  'Bolo salgado',
+                  'Empadinhas artesanais',
+                  'Pão de mel',
+                  'Croissant',
+                  'Sanduíches especiais',
+                  'Cuca da casa',
+                  'Fatias húngaras',
+                  'Rocambole salgado',
+                  'Focaccia',
+                  'Torradas especiais',
+                  'Salada de frutas',
+                  'Suco',
+                  'Drip café',
+                  'Charcutarias',
+                  'Queijos especiais',
+                  'Geleias da casa',
+                  'Caponata',
+                ],
+              })
+            "
+          >
             <div class="cafe-accent"></div>
             <div class="cafe-content">
               <div class="cafe-name">Brunch</div>
-              <div class="cafe-meta"><span class="cafe-price">R$ 85,00 / pessoa</span><span class="cafe-serves">Mínimo 5 pessoas</span></div>
-              <p class="cafe-desc">Bolos artesanais, pães de queijo, bolo salgado, empadinhas artesanais, pão de mel, croissant, sanduíches especiais, cuca da casa, fatias húngaras, rocambole salgado, focaccia, torradas especiais, salada de frutas, suco, drip café, charcutarias, queijos especiais, geleias da casa e caponata.</p>
+              <div class="cafe-meta">
+                <span class="cafe-price">R$ 85,00 / pessoa</span
+                ><span class="cafe-serves">Mínimo 5 pessoas</span>
+              </div>
+              <p class="cafe-desc">
+                Bolos artesanais, pães de queijo, bolo salgado, empadinhas
+                artesanais, pão de mel, croissant, sanduíches especiais, cuca da
+                casa, fatias húngaras, rocambole salgado, focaccia, torradas
+                especiais, salada de frutas, suco, drip café, charcutarias,
+                queijos especiais, geleias da casa e caponata.
+              </p>
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -304,8 +860,21 @@
           <p class="section-sub">Clique para ver os detalhes de cada item.</p>
         </div>
         <div class="adicionais-grid">
-
-          <div class="adicional-card" onclick="openModal({name:'Empadão da Gle',price:'R$ 70,00',serves:'',category:'Adicional',img:'img/adicionais/empadao/empadao.jpeg',icon:'🥧',desc:'Empadão artesanal disponível em dois sabores: frango cremoso ou entulho. Uma receita especial da casa, feita com muito carinho.',ingredients:['Frango cremoso','ou Entulho']})">
+          <div
+            class="adicional-card"
+            onclick="
+              openModal({
+                name: 'Empadão da Gle',
+                price: 'R$ 70,00',
+                serves: '',
+                category: 'Adicional',
+                img: 'img/adicionais/empadao/empadao.jpeg',
+                icon: '🥧',
+                desc: 'Empadão artesanal disponível em dois sabores: frango cremoso ou entulho. Uma receita especial da casa, feita com muito carinho.',
+                ingredients: ['Frango cremoso', 'ou Entulho'],
+              })
+            "
+          >
             <div class="adicional-icon">🥧</div>
             <div class="adicional-name">Empadão da Gle</div>
             <div class="adicional-price">R$ 70,00</div>
@@ -313,23 +882,81 @@
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
 
-          <div class="adicional-card" onclick="openModal({name:'Terrines',price:'R$ 90 · R$ 110 · R$ 150',serves:'250g / 350g / 550g',category:'Adicional',img:['img/adicionais/terrines/terrines_01.jpeg', 'img/adicionais/terrines/terrines_02.jpeg', 'img/adicionais/terrines/terrines_03.jpeg', 'img/adicionais/terrines/terrines_04.jpeg'],icon:'🫙',desc:'Terrines artesanais em três tamanhos, todas acompanham torradas especiais. Perfeitas para complementar qualquer platter.',ingredients:['R$ 90 — 250g com torradas','R$ 110 — 350g com torradas','R$ 150 — 550g com torradas']})">
+          <div
+            class="adicional-card"
+            onclick="
+              openModal({
+                name: 'Terrines',
+                price: 'R$ 90 · R$ 110 · R$ 150',
+                serves: '250g / 350g / 550g',
+                category: 'Adicional',
+                img: [
+                  'img/adicionais/terrines/terrines_01.jpeg',
+                  'img/adicionais/terrines/terrines_02.jpeg',
+                  'img/adicionais/terrines/terrines_03.jpeg',
+                  'img/adicionais/terrines/terrines_04.jpeg',
+                ],
+                icon: '🫙',
+                desc: 'Terrines artesanais em três tamanhos, todas acompanham torradas especiais. Perfeitas para complementar qualquer platter.',
+                ingredients: [
+                  'R$ 90 — 250g com torradas',
+                  'R$ 110 — 350g com torradas',
+                  'R$ 150 — 550g com torradas',
+                ],
+              })
+            "
+          >
             <div class="adicional-icon">🏺</div>
             <div class="adicional-name">Terrines</div>
             <div class="adicional-price">R$ 90 · R$ 110 · R$ 150</div>
-            <p class="adicional-desc">250g / 350g / 550g — todas acompanham torradas.</p>
+            <p class="adicional-desc">
+              250g / 350g / 550g — todas acompanham torradas.
+            </p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
 
-          <div class="adicional-card" onclick="openModal({name:'Sanduíches com Patês Especiais',price:'R$ 60,00',serves:'20 unidades',category:'Adicional',img:['img/adicionais/sanduiche/sanduiche_01.jpeg', 'img/adicionais/sanduiche/sanduiche_02.jpeg'],icon:'🥪',desc:'20 unidades de sanduíches artesanais recheados com patês especiais da casa. Ótimos para servir em eventos e confraternizações.',ingredients:['20 unidades','Patês especiais da casa']})">
+          <div
+            class="adicional-card"
+            onclick="
+              openModal({
+                name: 'Sanduíches com Patês Especiais',
+                price: 'R$ 60,00',
+                serves: '20 unidades',
+                category: 'Adicional',
+                img: [
+                  'img/adicionais/sanduiche/sanduiche_01.jpeg',
+                  'img/adicionais/sanduiche/sanduiche_02.jpeg',
+                ],
+                icon: '🥪',
+                desc: '20 unidades de sanduíches artesanais recheados com patês especiais da casa. Ótimos para servir em eventos e confraternizações.',
+                ingredients: ['20 unidades', 'Patês especiais da casa'],
+              })
+            "
+          >
             <div class="adicional-icon">🥪</div>
             <div class="adicional-name">Sanduíches com Patês Especiais</div>
             <div class="adicional-price">R$ 60,00 (20 unidades)</div>
-            <p class="adicional-desc">Sanduíches artesanais com patês da casa.</p>
+            <p class="adicional-desc">
+              Sanduíches artesanais com patês da casa.
+            </p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
 
-          <div class="adicional-card" onclick="openModal({name:'Focaccia Tradicional',price:'R$ 40,00',serves:'',category:'Adicional',img:'img/adicionais/foccacia_tradicional.jpg',icon:'🍕',desc:'Focaccia artesanal assada na hora, macia por dentro e crocante por fora. Receita tradicional italiana com ervas frescas.',ingredients:['Focaccia artesanal','Ervas frescas']})">
+          <div
+            class="adicional-card"
+            onclick="
+              openModal({
+                name: 'Focaccia Tradicional',
+                price: 'R$ 40,00',
+                serves: '',
+                category: 'Adicional',
+                img: 'img/adicionais/foccacia_tradicional.jpg',
+                icon: '🍕',
+                desc: 'Focaccia artesanal assada na hora, macia por dentro e crocante por fora. Receita tradicional italiana com ervas frescas.',
+                ingredients: ['Focaccia artesanal', 'Ervas frescas'],
+              })
+            "
+          >
             <div class="adicional-icon">🍕</div>
             <div class="adicional-name">Focaccia Tradicional</div>
             <div class="adicional-price">R$ 40,00</div>
@@ -337,57 +964,147 @@
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
 
-          <div class="adicional-card" onclick="openModal({name:'Focaccia de Pera com Gorgonzola e Mel',price:'R$ 60,00',serves:'',category:'Adicional',img:'img/adicionais/foccatia_outro.jpg',icon:'🍐',desc:'Focaccia artesanal com combinação sofisticada de pera, gorgonzola e mel. Um equilíbrio perfeito entre doce, salgado e cremoso.',ingredients:['Focaccia artesanal','Pera','Gorgonzola','Mel']})">
+          <div
+            class="adicional-card"
+            onclick="
+              openModal({
+                name: 'Focaccia de Pera com Gorgonzola e Mel',
+                price: 'R$ 60,00',
+                serves: '',
+                category: 'Adicional',
+                img: 'img/adicionais/foccatia_outro.jpg',
+                icon: '🍐',
+                desc: 'Focaccia artesanal com combinação sofisticada de pera, gorgonzola e mel. Um equilíbrio perfeito entre doce, salgado e cremoso.',
+                ingredients: [
+                  'Focaccia artesanal',
+                  'Pera',
+                  'Gorgonzola',
+                  'Mel',
+                ],
+              })
+            "
+          >
             <div class="adicional-icon">🍐</div>
-            <div class="adicional-name">Focaccia de Pera com Gorgonzola e Mel</div>
+            <div class="adicional-name">
+              Focaccia de Pera com Gorgonzola e Mel
+            </div>
             <div class="adicional-price">R$ 60,00</div>
-            <p class="adicional-desc">Combinação sofisticada de sabores doces e salgados.</p>
+            <p class="adicional-desc">
+              Combinação sofisticada de sabores doces e salgados.
+            </p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
 
-          <div class="adicional-card" onclick="openModal({name:'Trio de Pastas Artesanais',price:'R$ 90,00',serves:'',category:'Adicional',img:'img/adicionais/pastas/pastas.jpeg',icon:'🧄',desc:'Trio de pastas 100% artesanais: tomate seco, bacon com palmito e alho poró com limão siciliano. Acompanha torradinhas especiais.',ingredients:['Pasta de tomate seco','Pasta de bacon com palmito','Pasta de alho poró com limão siciliano','Torradinhas especiais']})">
+          <div
+            class="adicional-card"
+            onclick="
+              openModal({
+                name: 'Trio de Pastas Artesanais',
+                price: 'R$ 90,00',
+                serves: '',
+                category: 'Adicional',
+                img: 'img/adicionais/pastas/pastas.jpeg',
+                icon: '🧄',
+                desc: 'Trio de pastas 100% artesanais: tomate seco, bacon com palmito e alho poró com limão siciliano. Acompanha torradinhas especiais.',
+                ingredients: [
+                  'Pasta de tomate seco',
+                  'Pasta de bacon com palmito',
+                  'Pasta de alho poró com limão siciliano',
+                  'Torradinhas especiais',
+                ],
+              })
+            "
+          >
             <div class="adicional-icon">🧄</div>
             <div class="adicional-name">Trio de Pastas Artesanais</div>
             <div class="adicional-price">R$ 90,00</div>
-            <p class="adicional-desc">Tomate seco, bacon com palmito e alho poró com limão siciliano — acompanha torradinhas.</p>
+            <p class="adicional-desc">
+              Tomate seco, bacon com palmito e alho poró com limão siciliano —
+              acompanha torradinhas.
+            </p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
 
-          <div class="adicional-card" onclick="openModal({name:'Rocambole de Atum',price:'R$ 60,00',serves:'20 fatias',category:'Adicional',img:'img/adicionais/rocambole/rocambole.jpeg',icon:'🍣',desc:'Rocambole artesanal de atum fatiado em 20 fatias generosas. Perfeito para complementar qualquer platter ou servir em eventos.',ingredients:['20 fatias','Atum artesanal']})">
+          <div
+            class="adicional-card"
+            onclick="
+              openModal({
+                name: 'Rocambole de Atum',
+                price: 'R$ 60,00',
+                serves: '20 fatias',
+                category: 'Adicional',
+                img: 'img/adicionais/rocambole/rocambole.jpeg',
+                icon: '🍣',
+                desc: 'Rocambole artesanal de atum fatiado em 20 fatias generosas. Perfeito para complementar qualquer platter ou servir em eventos.',
+                ingredients: ['20 fatias', 'Atum artesanal'],
+              })
+            "
+          >
             <div class="adicional-icon">🍣</div>
             <div class="adicional-name">Rocambole de Atum</div>
             <div class="adicional-price">R$ 60,00 (20 fatias)</div>
-            <p class="adicional-desc">Rocambole artesanal de atum fatiado, perfeito para complementar qualquer platter.</p>
-            <div class="card-click-hint">Clique para ver detalhes</div>
-          </div>
-          
-          <div class="adicional-card adicional-new" onclick="openModal({name:'Quiche de Alho Poró',price:'R$ 80,00',serves:'',category:'Adicional',img:'img/adicionais/quiche/quiche.jpeg',icon:'🥧',desc:'Massa artesanal crocante com recheio aveludado de alho-poró e um gratinado dourado irresistível. Perfeita para qualquer ocasião.',ingredients:['Alho poró','Creme de Queijo', 'Bacon']})">
-            <div class="adicional-icon">🥧</div>
-            <div class="adicional-name">Quiche de Alho Poró</div>
-            <div class="adicional-price">R$ 80,00</div>
-            <p class="adicional-desc">Massa artesanal crocante com recheio aveludado de alho-poró e um gratinado dourado irresistível. Perfeita para qualquer ocasião.</p>
+            <p class="adicional-desc">
+              Rocambole artesanal de atum fatiado, perfeito para complementar
+              qualquer platter.
+            </p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
 
+          <div
+            class="adicional-card adicional-new"
+            onclick="
+              openModal({
+                name: 'Quiche de Alho Poró',
+                price: 'R$ 80,00',
+                serves: '',
+                category: 'Adicional',
+                img: 'img/adicionais/quiche/quiche.jpeg',
+                icon: '🥧',
+                desc: 'Massa artesanal crocante com recheio aveludado de alho-poró e um gratinado dourado irresistível. Perfeita para qualquer ocasião.',
+                ingredients: ['Alho poró', 'Creme de Queijo', 'Bacon'],
+              })
+            "
+          >
+            <div class="adicional-icon">🥧</div>
+            <div class="adicional-name">Quiche de Alho Poró</div>
+            <div class="adicional-price">R$ 80,00</div>
+            <p class="adicional-desc">
+              Massa artesanal crocante com recheio aveludado de alho-poró e um
+              gratinado dourado irresistível. Perfeita para qualquer ocasião.
+            </p>
+            <div class="card-click-hint">Clique para ver detalhes</div>
+          </div>
         </div>
       </div>
     </section>
 
     <div class="obs-bar">
       <p>
-        <strong>Observações importantes:</strong><br/>
-        * Cada montagem é única, nosso trabalho é artesanal. &nbsp;·&nbsp;
-        * As bandejas das Platters são retornáveis e devem ser devolvidas em 48 horas.
+        <strong>Observações importantes:</strong><br />
+        * Cada montagem é única, nosso trabalho é artesanal. &nbsp;·&nbsp; * As
+        bandejas das Platters são retornáveis e devem ser devolvidas em 48
+        horas.
       </p>
     </div>
 
     <section id="contato">
       <div class="cta-inner">
         <span class="section-eyebrow">🌸 Dia das Mães — 10 de Maio 🌸</span>
-        <h2 class="cta-title">Surpreenda quem<br/><em>você mais ama</em></h2>
-        <p class="cta-sub">Faça seu pedido pelo WhatsApp e nossa equipe vai te ajudar a escolher o platter perfeito para presentear sua mãe neste dia especial.</p>
-        <a href="https://wa.me/5555996851842" target="_blank" class="whatsapp-btn">
-          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <h2 class="cta-title">Surpreenda quem<br /><em>você mais ama</em></h2>
+        <p class="cta-sub">
+          Faça seu pedido pelo WhatsApp e nossa equipe vai te ajudar a escolher
+          o platter perfeito para presentear sua mãe neste dia especial.
+        </p>
+        <a
+          href="https://wa.me/5555996851842"
+          target="_blank"
+          class="whatsapp-btn"
+        >
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+            />
+          </svg>
           Chamar no WhatsApp
         </a>
         <p class="cta-note">Respondemos rapidinho! 🌿</p>
@@ -396,9 +1113,23 @@
 
     <footer>
       <div class="footer-logo">Alecrim <em>Platters</em></div>
-      <div class="footer-tagline">Transformando momentos em experiências únicas. 🌸 Feliz Dia das Mães!</div>
-      <a href="https://www.instagram.com/alecrimplatters/" target="_blank" class="footer-social">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px">
+      <div class="footer-tagline">
+        Transformando momentos em experiências únicas. 🌸 Feliz Dia das Mães!
+      </div>
+      <a
+        href="https://www.instagram.com/alecrimplatters/"
+        target="_blank"
+        class="footer-social"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          style="width: 20px; height: 20px"
+        >
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -406,43 +1137,45 @@
         <span>@alecrimplatters</span>
       </a>
       <div class="footer-divider"></div>
-      <div class="footer-bottom">© 2025 Alecrim Platters · Feito com 🌿 e muito carinho</div>
+      <div class="footer-bottom">
+        © 2025 Alecrim Platters · Feito com 🌿 e muito carinho
+      </div>
     </footer>
 
     <script>
-      const overlay   = document.getElementById('modalOverlay');
-      const modalClose = document.getElementById('modalClose');
-      const carouselControls = document.getElementById('carouselControls');
-      const carouselPrev = document.getElementById('carouselPrev');
-      const carouselNext = document.getElementById('carouselNext');
-      const carouselIndicator = document.getElementById('carouselIndicator');
+      const overlay = document.getElementById("modalOverlay");
+      const modalClose = document.getElementById("modalClose");
+      const carouselControls = document.getElementById("carouselControls");
+      const carouselPrev = document.getElementById("carouselPrev");
+      const carouselNext = document.getElementById("carouselNext");
+      const carouselIndicator = document.getElementById("carouselIndicator");
 
       let currentImageIndex = 0;
       let currentImages = [];
       let currentData = {};
 
       function renderCurrentImage() {
-        const imgWrap = document.getElementById('modalImgWrap');
+        const imgWrap = document.getElementById("modalImgWrap");
         const currentImg = currentImages[currentImageIndex];
 
-        imgWrap.innerHTML = '';
+        imgWrap.innerHTML = "";
 
         const img = new Image();
-        img.onload = function() {
-          imgWrap.innerHTML = '';
-          const imgEl = document.createElement('img');
+        img.onload = function () {
+          imgWrap.innerHTML = "";
+          const imgEl = document.createElement("img");
           imgEl.src = currentImg;
           imgEl.alt = currentData.name;
           imgWrap.appendChild(imgEl);
-          const tag = document.createElement('span');
-          tag.className = 'modal-category-tag';
+          const tag = document.createElement("span");
+          tag.className = "modal-category-tag";
           tag.textContent = currentData.category;
           imgWrap.appendChild(tag);
         };
-        img.onerror = function() {
+        img.onerror = function () {
           imgWrap.innerHTML = `
             <div class="modal-img-placeholder">
-              <span>${currentData.icon || '🌿'}</span>
+              <span>${currentData.icon || "🌿"}</span>
               <span>Foto em breve</span>
             </div>
             <span class="modal-category-tag">${currentData.category}</span>
@@ -481,77 +1214,83 @@
         }
 
         if (currentImages.length > 1) {
-          carouselControls.style.display = 'flex';
+          carouselControls.style.display = "flex";
         } else {
-          carouselControls.style.display = 'none';
+          carouselControls.style.display = "none";
         }
 
-        document.getElementById('modalName').textContent   = data.name;
-        document.getElementById('modalPrice').textContent  = data.price;
-        document.getElementById('modalServes').textContent = data.serves || '';
-        document.getElementById('modalDesc').textContent   = data.desc;
+        document.getElementById("modalName").textContent = data.name;
+        document.getElementById("modalPrice").textContent = data.price;
+        document.getElementById("modalServes").textContent = data.serves || "";
+        document.getElementById("modalDesc").textContent = data.desc;
 
-        const servesEl = document.getElementById('modalServes');
-        servesEl.style.display = data.serves ? 'inline-block' : 'none';
+        const servesEl = document.getElementById("modalServes");
+        servesEl.style.display = data.serves ? "inline-block" : "none";
 
         renderCurrentImage();
 
-        const ingWrap = document.getElementById('modalIngredients');
-        ingWrap.innerHTML = '';
+        const ingWrap = document.getElementById("modalIngredients");
+        ingWrap.innerHTML = "";
         if (data.ingredients && data.ingredients.length) {
-          data.ingredients.forEach(i => {
-            const tag = document.createElement('span');
-            tag.className = 'ingredient-tag';
+          data.ingredients.forEach((i) => {
+            const tag = document.createElement("span");
+            tag.className = "ingredient-tag";
             tag.textContent = i;
             ingWrap.appendChild(tag);
           });
         }
 
-        document.getElementById('modalPhotoNote').textContent = '📸 Fotos ilustrativas — cada montagem é única!';
+        document.getElementById("modalPhotoNote").textContent =
+          "📸 Fotos ilustrativas — cada montagem é única!";
 
-        const msg = encodeURIComponent(`Olá! Tenho interesse no *${data.name}* (${data.price}). Poderia me dar mais informações?`);
-        document.getElementById('modalWhatsapp').href = `https://wa.me/5555996851842?text=${msg}`;
+        const msg = encodeURIComponent(
+          `Olá! Tenho interesse no *${data.name}* (${data.price}). Poderia me dar mais informações?`,
+        );
+        document.getElementById("modalWhatsapp").href =
+          `https://wa.me/5555996851842?text=${msg}`;
 
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
       }
 
       function closeModal() {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
       }
 
-      modalClose.addEventListener('click', closeModal);
+      modalClose.addEventListener("click", closeModal);
 
-      overlay.addEventListener('click', function(e) {
+      overlay.addEventListener("click", function (e) {
         if (e.target === overlay) closeModal();
       });
 
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeModal();
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeModal();
       });
 
-      carouselPrev.addEventListener('click', prevImage);
-      carouselNext.addEventListener('click', nextImage);
+      carouselPrev.addEventListener("click", prevImage);
+      carouselNext.addEventListener("click", nextImage);
 
       function updateCountdown() {
-        const target = new Date('2026-05-10T00:00:00');
+        const target = new Date("2026-05-10T00:00:00");
         const now = new Date();
         const diff = target - now;
         if (diff <= 0) {
-          document.getElementById('countdown').innerHTML = '<div class="countdown-item countdown-past">🌸 Feliz Dia das Mães! 🌸</div>';
+          document.getElementById("countdown").innerHTML =
+            '<div class="countdown-item countdown-past">🌸 Feliz Dia das Mães! 🌸</div>';
           return;
         }
-        const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        document.getElementById('cdDias').textContent  = days;
-        document.getElementById('cdHoras').textContent = hours;
-        document.getElementById('cdMin').textContent   = mins;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById("cdDias").textContent = days;
+        document.getElementById("cdHoras").textContent = hours;
+        document.getElementById("cdMin").textContent = mins;
       }
       updateCountdown();
       setInterval(updateCountdown, 60000);
-
-</script>
+    </script>
   </body>
 </html>

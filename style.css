@@ -16,14 +16,6 @@
   --text: #2a2a1e;
   --muted: #7a7a6a;
   --border: rgba(45, 90, 39, 0.15);
-
-  /* ── Especial Dia dos Namorados ── */
-  --rose: #c0485a;
-  --rose2: #e07080;
-  --rose3: #f5d0d6;
-  --rose-dark: #8a2a38;
-  --burgundy: #6b1f30;
-  --border-rose: rgba(192, 72, 90, 0.2);
 }
 
 html {
@@ -386,6 +378,7 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
+
 .platter-card {
   background: white;
   border: 1px solid var(--border);
@@ -604,10 +597,16 @@ nav {
   font-style: italic;
 }
 .adicional-card.adicional-new {
-  border-color: var(--gold);
-  background: linear-gradient(to bottom, #fffef9, white);
+  border-color: var(--gold); /* Destaque na borda */
+  background: linear-gradient(
+    to bottom,
+    #fffef9,
+    white
+  ); /* Fundo levemente diferenciado */
   position: relative;
 }
+
+/* Opcional: Adiciona uma pequena "tag" de Novo */
 .adicional-card.adicional-new::after {
   content: "NOVO";
   position: absolute;
@@ -620,7 +619,7 @@ nav {
 }
 .adicional-card.adicional-new:hover {
   border-color: var(--gold);
-  box-shadow: 0 4px 12px rgba(184, 146, 74, 0.15);
+  box-shadow: 0 4px 12px rgba(var(--gold-rgb), 0.15);
 }
 
 /* ── OBS BAR ── */
@@ -756,7 +755,7 @@ footer {
 
 /* ════════════════════════════════════
          MODAL / POP-UP
-   ════════════════════════════════════ */
+      ════════════════════════════════════ */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -775,6 +774,7 @@ footer {
   opacity: 1;
   pointer-events: all;
 }
+
 .modal {
   background: var(--cream);
   border-radius: 6px;
@@ -790,6 +790,8 @@ footer {
 .modal-overlay.active .modal {
   transform: translateY(0) scale(1);
 }
+
+/* Imagem do modal */
 .modal-img-wrap {
   width: 100%;
   height: 360px;
@@ -804,6 +806,7 @@ footer {
   object-fit: cover;
   display: block;
 }
+/* Placeholder enquanto não há foto */
 .modal-img-placeholder {
   width: 100%;
   height: 100%;
@@ -825,6 +828,8 @@ footer {
   opacity: 0.7;
   letter-spacing: 0.06em;
 }
+
+/* Tag de categoria no canto da imagem */
 .modal-category-tag {
   position: absolute;
   bottom: 1rem;
@@ -838,6 +843,8 @@ footer {
   border-radius: 2px;
   font-weight: 500;
 }
+
+/* Controles do carrossel de fotos */
 .modal-carousel-controls {
   display: flex;
   align-items: center;
@@ -884,6 +891,8 @@ footer {
   min-width: 45px;
   text-align: center;
 }
+
+/* Fechar */
 .modal-close {
   position: absolute;
   top: 1rem;
@@ -905,9 +914,12 @@ footer {
 .modal-close:hover {
   background: rgba(0, 0, 0, 0.6);
 }
+
+/* Corpo do modal */
 .modal-body {
   padding: 2rem 2.2rem 2.5rem;
 }
+
 .modal-header {
   margin-bottom: 1.2rem;
 }
@@ -940,11 +952,13 @@ footer {
   padding: 0.3rem 0.8rem;
   border-radius: 100px;
 }
+
 .modal-divider {
   height: 1px;
   background: var(--border);
   margin: 1.2rem 0;
 }
+
 .modal-desc-label {
   font-size: 0.7rem;
   letter-spacing: 0.12em;
@@ -960,6 +974,8 @@ footer {
   color: var(--muted);
   line-height: 1.85;
 }
+
+/* Lista de ingredientes */
 .modal-ingredients {
   display: flex;
   flex-wrap: wrap;
@@ -974,6 +990,8 @@ footer {
   padding: 0.3rem 0.75rem;
   border-radius: 100px;
 }
+
+/* Botão de pedido no modal */
 .modal-cta {
   margin-top: 1.8rem;
   display: flex;
@@ -1031,322 +1049,6 @@ footer {
   }
 }
 
-/* ════════════════════════════════════
-   ESPECIAL DIA DOS NAMORADOS
-   Usado apenas em namorados.html
-   ════════════════════════════════════ */
-
-/* Hero — variantes rose */
-.hero-bg-rose {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 50% at 50% 80%, rgba(245, 208, 214, 0.55) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 10% 20%, rgba(245, 208, 214, 0.3) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 90% 10%, rgba(192, 72, 90, 0.1) 0%, transparent 60%);
-}
-.hero-petal {
-  position: absolute;
-  opacity: 0.12;
-  pointer-events: none;
-}
-.hero-petal-left {
-  left: -30px;
-  top: 12%;
-  width: 280px;
-  transform: rotate(-15deg);
-}
-.hero-petal-right {
-  right: -30px;
-  bottom: 18%;
-  width: 280px;
-  transform: rotate(165deg) scaleX(-1);
-}
-.hero-date-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--rose);
-  color: white;
-  padding: 0.55rem 1.4rem;
-  border-radius: 100px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin: 1.2rem 0 1.8rem;
-  animation: fadeUp 0.9s 0.2s ease both;
-}
-
-/* Corações flutuantes */
-.floating-hearts {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
-.fh {
-  position: absolute;
-  font-size: 1.2rem;
-  opacity: 0;
-  animation: floatHeart linear infinite;
-}
-@keyframes floatHeart {
-  0%   { opacity: 0; transform: translateY(100vh) scale(0.5); }
-  10%  { opacity: 0.6; }
-  90%  { opacity: 0.3; }
-  100% { opacity: 0; transform: translateY(-10vh) scale(1.2) rotate(20deg); }
-}
-
-/* Botões rose */
-.btn-rose {
-  background: var(--rose);
-  color: white;
-}
-.btn-rose:hover {
-  background: var(--rose-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(192, 72, 90, 0.3);
-}
-.btn-outline-rose {
-  background: transparent;
-  color: var(--rose);
-  border: 1.5px solid var(--rose);
-}
-.btn-outline-rose:hover {
-  background: var(--rose);
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Nav CTA rose */
-.nav-cta-rose {
-  background: var(--rose);
-}
-.nav-cta-rose:hover {
-  background: var(--rose2);
-}
-
-/* Nav links hover rose */
-.nav-rose .nav-links a:hover,
-.nav-rose .nav-instagram:hover {
-  color: var(--rose);
-}
-
-/* Banner especial namorados */
-.namorados-banner {
-  background: linear-gradient(135deg, var(--burgundy) 0%, var(--rose-dark) 50%, #7a1525 100%);
-  padding: 5rem 3rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.namorados-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 40%);
-}
-.nb-inner {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-.nb-tag {
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: var(--rose3);
-  letter-spacing: 0.12em;
-  margin-bottom: 1rem;
-  display: block;
-}
-.nb-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 300;
-  color: var(--cream);
-  line-height: 1.2;
-  margin-bottom: 0.6rem;
-}
-.nb-title em {
-  font-style: italic;
-  font-weight: 700;
-  color: var(--rose3);
-}
-.nb-desc {
-  color: rgba(245, 240, 232, 0.75);
-  font-size: 0.95rem;
-  line-height: 1.85;
-  font-weight: 300;
-  margin-bottom: 2rem;
-}
-.nb-highlight {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: var(--cream);
-  padding: 0.6rem 1.5rem;
-  border-radius: 100px;
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  margin-bottom: 2rem;
-}
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50%       { transform: scale(1.1); }
-}
-
-/* Cards rose — versão namorados */
-.platter-card-rose {
-  border-color: var(--border-rose);
-}
-.platter-card-rose:hover {
-  box-shadow: 0 16px 40px rgba(192, 72, 90, 0.12);
-}
-.platter-card-top-rose {
-  background: var(--rose-dark);
-}
-.platter-serves-rose {
-  color: var(--rose3);
-}
-.platter-card.featured-rose {
-  border-color: var(--rose);
-  box-shadow: 0 4px 20px rgba(192, 72, 90, 0.18);
-}
-.platter-card.featured-rose .platter-card-top {
-  background: var(--rose);
-}
-.featured-badge-rose {
-  background: var(--rose);
-}
-
-/* Badge "Ideal para 2" */
-.namorados-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: white;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.8rem;
-  border-radius: 100px;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-/* Card especial namorados */
-.platter-card.namorados-special {
-  border-color: var(--rose);
-  box-shadow: 0 4px 24px rgba(192, 72, 90, 0.2);
-}
-.platter-card.namorados-special .platter-card-top {
-  background: linear-gradient(135deg, var(--burgundy), var(--rose-dark));
-}
-
-/* Cafés rose */
-.cafe-card-rose {
-  border-color: var(--border-rose);
-}
-.cafe-card-rose:hover {
-  box-shadow: 0 12px 32px rgba(192, 72, 90, 0.1);
-}
-.cafe-accent-rose {
-  background: var(--rose);
-}
-.cafe-name-rose {
-  color: var(--rose-dark);
-}
-
-/* Adicionais rose */
-.adicional-card-rose {
-  border-color: var(--border-rose);
-}
-.adicional-card-rose:hover {
-  border-color: var(--rose2);
-}
-.adicional-name-rose {
-  color: var(--rose-dark);
-}
-
-/* Section rose */
-.section-eyebrow-rose {
-  color: var(--rose2);
-}
-.section-title-rose {
-  color: var(--rose-dark);
-}
-.card-click-hint-rose {
-  color: var(--rose2);
-}
-
-/* Obs bar rose */
-.obs-bar-rose {
-  background: var(--rose-dark);
-}
-
-/* CTA rose */
-.cta-title-rose {
-  color: var(--rose-dark);
-}
-.cta-title-rose em {
-  color: var(--rose);
-}
-
-/* Footer rose */
-.footer-rose {
-  background: var(--burgundy);
-}
-.footer-tagline-rose {
-  color: var(--rose3);
-}
-.footer-social-rose {
-  color: var(--rose3);
-}
-.footer-social-rose:hover {
-  color: var(--cream);
-}
-
-/* Modal rose */
-.modal-img-wrap-rose {
-  background: var(--rose3);
-}
-.modal-img-placeholder-rose {
-  background: linear-gradient(135deg, var(--rose3) 0%, #e8b0ba 100%);
-  color: var(--rose);
-}
-.modal-category-tag-rose {
-  background: var(--rose);
-}
-.modal-carousel-controls-rose {
-  border-bottom-color: var(--border-rose);
-}
-.carousel-arrow-rose {
-  border-color: var(--rose);
-  color: var(--rose);
-}
-.carousel-arrow-rose:hover {
-  background: var(--rose);
-  color: white;
-}
-.modal-name-rose {
-  color: var(--rose-dark);
-}
-.modal-serves-rose {
-  background: var(--rose3);
-}
-.modal-divider-rose {
-  background: var(--border-rose);
-}
-.modal-desc-label-rose {
-  color: var(--rose2);
-}
-
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav {
@@ -1361,8 +1063,7 @@ footer {
   #platters,
   #cafes,
   #adicionais,
-  #contato,
-  .namorados-banner {
+  #contato {
     padding: 5rem 1.5rem 3rem;
   }
   .platters-grid {
@@ -1399,237 +1100,3 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-
-      :root {
-        --cream: #f5f0e8;
-        --cream2: #ede7d9;
-        --green: #2d5a27;
-        --green2: #4a7c42;
-        --green3: #c8dbbf;
-        --gold: #b8924a;
-        --rose: #c0485a;
-        --rose2: #e07080;
-        --rose3: #f5d0d6;
-        --rose-dark: #8a2a38;
-        --burgundy: #6b1f30;
-        --text: #2a2a1e;
-        --muted: #7a7a6a;
-        --border: rgba(45, 90, 39, 0.15);
-        --border-rose: rgba(192, 72, 90, 0.2);
-      }
-
-      html{scroll-behavior:smooth}
-      body{font-family:"Jost",sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
-
-      /* ── MODAL ── */
-      .modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(20,10,15,0.65);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity 0.3s ease}
-      .modal-overlay.active{opacity:1;pointer-events:all}
-      .modal{background:var(--cream);border-radius:6px;max-width:620px;width:100%;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(30px) scale(0.97);transition:transform 0.35s ease;box-shadow:0 30px 80px rgba(0,0,0,0.25)}
-      .modal-overlay.active .modal{transform:translateY(0) scale(1)}
-      .modal-img-wrap{width:100%;height:360px;background:var(--rose3);position:relative;overflow:hidden;border-radius:6px 6px 0 0}
-      .modal-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-      .modal-img-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;background:linear-gradient(135deg,var(--rose3) 0%,#e8b0ba 100%);color:var(--rose)}
-      .modal-img-placeholder span:first-child{font-size:3rem}
-      .modal-img-placeholder span:last-child{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:0.9rem;opacity:0.7;letter-spacing:0.06em}
-      .modal-category-tag{position:absolute;bottom:1rem;left:1.2rem;background:var(--rose);color:white;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:2px;font-weight:500}
-      .modal-carousel-controls{display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:0.8rem 1.2rem;background:rgba(245,240,232,0.95);border-bottom:1px solid var(--border-rose)}
-      .carousel-arrow{width:36px;height:36px;border:1.5px solid var(--rose);background:transparent;color:var(--rose);font-size:1.4rem;font-weight:300;cursor:pointer;border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
-      .carousel-arrow:hover{background:var(--rose);color:white}
-      .carousel-arrow:disabled{opacity:0.4;cursor:not-allowed;border-color:var(--muted);color:var(--muted)}
-      .carousel-arrow:disabled:hover{background:transparent;color:var(--muted)}
-      .carousel-indicator{font-size:0.8rem;color:var(--muted);letter-spacing:0.05em;font-weight:500;min-width:45px;text-align:center}
-      .modal-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.35);border:none;color:white;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;z-index:10}
-      .modal-close:hover{background:rgba(0,0,0,0.6)}
-      .modal-body{padding:2rem 2.2rem 2.5rem}
-      .modal-header{margin-bottom:1.2rem}
-      .modal-name{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:700;color:var(--rose-dark);line-height:1.1;margin-bottom:0.3rem}
-      .modal-meta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
-      .modal-price{font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:700;color:var(--rose)}
-      .modal-serves{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;background:var(--rose3);padding:0.3rem 0.8rem;border-radius:100px}
-      .modal-divider{height:1px;background:var(--border-rose);margin:1.2rem 0}
-      .modal-desc-label{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--rose2);font-weight:500;margin-bottom:0.7rem}
-      .modal-desc{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1rem;color:var(--muted);line-height:1.85}
-      .modal-ingredients{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.2rem}
-      .ingredient-tag{background:white;border:1px solid var(--border-rose);color:var(--text);font-size:0.75rem;padding:0.3rem 0.75rem;border-radius:100px}
-      .modal-cta{margin-top:1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-      .modal-photo-note{font-size:0.72rem;color:var(--muted);font-style:italic}
-      .modal-whatsapp{display:inline-flex;align-items:center;gap:0.6rem;background:#25d366;color:white;padding:0.8rem 1.6rem;border-radius:3px;font-size:0.82rem;font-weight:500;text-decoration:none;transition:all 0.25s}
-      .modal-whatsapp:hover{background:#1fba5a;transform:translateY(-1px)}
-      .modal-whatsapp svg{width:16px;height:16px;fill:white}
-
-      /* ── NAV ── */
-      nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(245,240,232,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-      .nav-logo{display:flex;align-items:center;gap:0.7rem;text-decoration:none;font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:600;color:var(--green);letter-spacing:0.04em}
-      .nav-logo-img{width:38px;height:38px;object-fit:contain;border-radius:50%}
-      .nav-logo-text span{font-style:italic;font-weight:300}
-      .nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
-      .nav-links a{color:var(--muted);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.25s}
-      .nav-links a:hover{color:var(--rose)}
-      .nav-instagram{display:flex;align-items:center;color:var(--muted);transition:color 0.25s}
-      .nav-instagram:hover{color:var(--rose)}
-      .nav-cta{display:inline-flex;align-items:center;gap:0.5rem;background:var(--rose);color:white;padding:0.6rem 1.4rem;border-radius:2px;font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:background 0.25s}
-      .nav-cta:hover{background:var(--rose2)}
-
-      /* ── HERO ── */
-      .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 5rem;position:relative;overflow:hidden;background:var(--cream)}
-      .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 80%,rgba(245,208,214,0.55) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 10% 20%,rgba(245,208,214,0.3) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 90% 10%,rgba(192,72,90,0.1) 0%,transparent 60%)}
-
-      /* Pétalas decorativas */
-      .hero-petal{position:absolute;opacity:0.12;pointer-events:none}
-      .hero-petal-left{left:-30px;top:12%;width:280px;transform:rotate(-15deg)}
-      .hero-petal-right{right:-30px;bottom:18%;width:280px;transform:rotate(165deg) scaleX(-1)}
-
-      .hero-content{position:relative;z-index:2;max-width:760px}
-
-      .hero-badge{display:inline-block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:0.95rem;color:var(--rose2);letter-spacing:0.08em;margin-bottom:1.5rem;animation:fadeUp 0.9s ease both}
-
-      /* Corações flutuantes */
-      .floating-hearts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
-      .fh{position:absolute;font-size:1.2rem;opacity:0;animation:floatHeart linear infinite}
-      @keyframes floatHeart{0%{opacity:0;transform:translateY(100vh) scale(0.5)}10%{opacity:0.6}90%{opacity:0.3}100%{opacity:0;transform:translateY(-10vh) scale(1.2) rotate(20deg)}}
-
-      .hero-title{font-family:"Cormorant Garamond",serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:300;line-height:1;color:var(--rose-dark);margin-bottom:0.4rem;animation:fadeUp 0.9s 0.1s ease both}
-      .hero-title strong{display:block;font-weight:700;font-style:italic;color:var(--rose)}
-
-      .hero-date-badge{display:inline-flex;align-items:center;gap:0.6rem;background:var(--rose);color:white;padding:0.55rem 1.4rem;border-radius:100px;font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;margin:1.2rem 0 1.8rem;animation:fadeUp 0.9s 0.2s ease both}
-
-      .hero-divider{display:flex;align-items:center;gap:1rem;justify-content:center;margin:1.2rem auto 1.5rem;animation:fadeUp 0.9s 0.25s ease both}
-      .hero-divider::before,.hero-divider::after{content:"";flex:1;max-width:80px;height:1px;background:var(--rose2);opacity:0.5}
-
-      .hero-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.05rem,2.5vw,1.35rem);color:var(--muted);line-height:1.6;max-width:520px;margin:0 auto 2.8rem;animation:fadeUp 0.9s 0.3s ease both}
-      .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.9s 0.4s ease both}
-      .btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2.2rem;border-radius:2px;font-family:"Jost",sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all 0.25s;border:none}
-      .btn-rose{background:var(--rose);color:white}
-      .btn-rose:hover{background:var(--rose-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(192,72,90,0.3)}
-      .btn-outline{background:transparent;color:var(--rose);border:1.5px solid var(--rose)}
-      .btn-outline:hover{background:var(--rose);color:white;transform:translateY(-2px)}
-      .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--muted);font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;animation:fadeUp 1s 0.8s ease both}
-      .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--rose2),transparent);animation:scrollPulse 2s infinite}
-
-      /* ── SOBRE ── */
-      #sobre{background:var(--burgundy);padding:5rem 3rem;text-align:center;position:relative;overflow:hidden}
-      #sobre::before{content:"💕";position:absolute;font-size:12rem;opacity:0.04;top:-2rem;left:-3rem;pointer-events:none}
-      #sobre::after{content:"🌹";position:absolute;font-size:12rem;opacity:0.04;bottom:-2rem;right:-2rem;pointer-events:none}
-      .sobre-inner{max-width:700px;margin:0 auto;position:relative;z-index:2}
-      .sobre-tag{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:0.9rem;color:var(--rose3);letter-spacing:0.1em;margin-bottom:1.2rem}
-      .sobre-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:300;color:var(--cream);line-height:1.2;margin-bottom:1.5rem}
-      .sobre-title em{font-style:italic;font-weight:600;color:var(--rose3)}
-      .sobre-desc{color:rgba(245,240,232,0.75);font-size:0.95rem;line-height:1.85;font-weight:300;margin-bottom:2.5rem}
-      .sobre-pills{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-      .pill{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:var(--cream);padding:0.5rem 1.2rem;border-radius:100px;font-size:0.78rem;letter-spacing:0.06em}
-
-      /* ── SECTIONS ── */
-      .section-wrap{max-width:1100px;margin:0 auto}
-      .section-header{text-align:center;margin-bottom:4rem}
-      .section-eyebrow{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:0.9rem;color:var(--rose2);letter-spacing:0.1em;margin-bottom:0.8rem;display:block}
-      .section-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:var(--rose-dark);line-height:1.15}
-      .section-sub{color:var(--muted);font-size:0.9rem;line-height:1.75;margin-top:0.8rem;font-weight:300}
-
-      /* ── PLATTERS ── */
-      #platters{padding:6rem 3rem;background:var(--cream)}
-      .platters-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-      .platter-card{background:white;border:1px solid var(--border-rose);border-radius:4px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;position:relative;cursor:pointer;text-decoration:none}
-      .platter-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(192,72,90,0.12)}
-      .platter-card-top{background:var(--rose-dark);padding:1.5rem 1.8rem 1.2rem;position:relative;overflow:hidden}
-      .platter-card-top::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:20px;background:white;clip-path:ellipse(55% 100% at 50% 100%)}
-      .platter-name{font-family:"Cormorant Garamond",serif;font-size:1.6rem;font-weight:600;color:var(--cream);margin-bottom:0.2rem}
-      .platter-serves{font-size:0.75rem;color:var(--rose3);letter-spacing:0.08em;text-transform:uppercase}
-      .platter-price{position:absolute;top:1.2rem;right:1.5rem;font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:700;color:var(--cream)}
-      .platter-card-body{padding:1.5rem 1.8rem 1.8rem}
-      .platter-desc{font-size:0.82rem;color:var(--muted);line-height:1.8;font-weight:300;font-style:italic}
-      .platter-card.featured .platter-card-top{background:var(--rose)}
-      .platter-card.featured{border-color:var(--rose);box-shadow:0 4px 20px rgba(192,72,90,0.18)}
-      .featured-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--rose);color:white;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:0 0 4px 4px;font-weight:500}
-      .card-click-hint{display:flex;align-items:center;gap:0.4rem;font-size:0.72rem;color:var(--rose2);margin-top:1rem;font-weight:500;letter-spacing:0.04em}
-      .card-click-hint::before{content:"👆";font-size:0.8rem}
-
-      /* Destaque especial namorados */
-      .platter-card.namorados-special .platter-card-top{background:linear-gradient(135deg, var(--burgundy), var(--rose-dark))}
-      .platter-card.namorados-special{border-color:var(--rose);box-shadow:0 4px 24px rgba(192,72,90,0.2)}
-      .namorados-badge{display:inline-block;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.35);color:white;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.8rem;border-radius:100px;font-weight:500;margin-bottom:0.5rem}
-
-      /* ── CAFÉS ── */
-      #cafes{padding:6rem 3rem;background:var(--cream2)}
-      .cafes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-      .cafe-card{background:white;border:1px solid var(--border-rose);border-radius:4px;padding:2rem;display:flex;gap:1.5rem;transition:transform 0.3s,box-shadow 0.3s;cursor:pointer}
-      .cafe-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(192,72,90,0.1)}
-      .cafe-accent{width:4px;border-radius:4px;background:var(--rose);flex-shrink:0}
-      .cafe-card.brunch .cafe-accent{background:var(--gold)}
-      .cafe-content{flex:1}
-      .cafe-name{font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:600;color:var(--rose-dark);margin-bottom:0.2rem}
-      .cafe-meta{display:flex;align-items:center;gap:1rem;margin-bottom:0.8rem}
-      .cafe-price{font-family:"Cormorant Garamond",serif;font-size:1.2rem;font-weight:700;color:var(--gold)}
-      .cafe-serves{font-size:0.72rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase}
-      .cafe-desc{font-size:0.82rem;color:var(--muted);line-height:1.8;font-style:italic;font-weight:300}
-
-      /* ── ADICIONAIS ── */
-      #adicionais{padding:6rem 3rem;background:var(--cream)}
-      .adicionais-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-      .adicional-card{background:white;border:1px solid var(--border-rose);border-radius:4px;padding:1.5rem;transition:border-color 0.3s,transform 0.3s;cursor:pointer}
-      .adicional-card:hover{border-color:var(--rose2);transform:translateY(-3px)}
-      .adicional-icon{font-size:1.4rem;margin-bottom:0.8rem}
-      .adicional-name{font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:600;color:var(--rose-dark);margin-bottom:0.4rem}
-      .adicional-price{font-size:0.82rem;font-weight:500;color:var(--gold);margin-bottom:0.5rem}
-      .adicional-desc{font-size:0.78rem;color:var(--muted);line-height:1.7;font-style:italic}
-      .adicional-card.adicional-new{border-color:var(--gold);background:linear-gradient(to bottom,#fffef9,white);position:relative}
-      .adicional-card.adicional-new::after{content:"NOVO";position:absolute;top:0.5rem;right:0.5rem;font-size:0.6rem;font-weight:700;color:var(--gold);letter-spacing:0.05rem}
-
-      /* ── BANNER ESPECIAL NAMORADOS ── */
-      .namorados-banner{background:linear-gradient(135deg,var(--burgundy) 0%,var(--rose-dark) 50%,#7a1525 100%);padding:5rem 3rem;text-align:center;position:relative;overflow:hidden}
-      .namorados-banner::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.04) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,255,255,0.04) 0%,transparent 40%)}
-      .nb-inner{max-width:700px;margin:0 auto;position:relative;z-index:2}
-      .nb-hearts{font-size:2rem;letter-spacing:0.5rem;margin-bottom:1.5rem;animation:heartbeat 1.5s ease-in-out infinite}
-      @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
-      .nb-tag{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:0.9rem;color:var(--rose3);letter-spacing:0.12em;margin-bottom:1rem;display:block}
-      .nb-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:300;color:var(--cream);line-height:1.2;margin-bottom:0.6rem}
-      .nb-title em{font-style:italic;font-weight:700;color:var(--rose3)}
-      .nb-desc{color:rgba(245,240,232,0.75);font-size:0.95rem;line-height:1.85;font-weight:300;margin-bottom:2rem}
-      .nb-highlight{display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:var(--cream);padding:0.6rem 1.5rem;border-radius:100px;font-size:0.82rem;letter-spacing:0.06em;margin-bottom:2rem}
-
-      /* ── OBS BAR ── */
-      .obs-bar{background:var(--rose-dark);padding:2.5rem 3rem;text-align:center}
-      .obs-bar p{color:rgba(245,240,232,0.85);font-size:0.82rem;line-height:2;font-weight:300}
-      .obs-bar strong{color:var(--cream);font-weight:500}
-
-      /* ── CTA ── */
-      #contato{padding:7rem 3rem;background:var(--cream2);text-align:center;position:relative;overflow:hidden}
-      .cta-inner{position:relative;z-index:2;max-width:600px;margin:0 auto}
-      .cta-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:300;color:var(--rose-dark);line-height:1.2;margin-bottom:1rem}
-      .cta-title em{font-style:italic;font-weight:600;color:var(--rose)}
-      .cta-sub{color:var(--muted);font-size:0.95rem;line-height:1.7;margin-bottom:2.5rem;font-weight:300}
-      .whatsapp-btn{display:inline-flex;align-items:center;gap:0.8rem;background:#25d366;color:white;padding:1.1rem 2.8rem;border-radius:3px;font-size:0.95rem;font-weight:500;letter-spacing:0.04em;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(37,211,102,0.3)}
-      .whatsapp-btn:hover{background:#1fba5a;transform:translateY(-3px);box-shadow:0 10px 30px rgba(37,211,102,0.4)}
-      .whatsapp-btn svg{width:22px;height:22px;fill:white}
-      .cta-note{margin-top:1.5rem;font-size:0.78rem;color:var(--muted);font-style:italic}
-
-      /* ── FOOTER ── */
-      footer{background:var(--burgundy);padding:3rem;text-align:center}
-      .footer-logo{font-family:"Cormorant Garamond",serif;font-size:1.8rem;font-weight:300;color:var(--cream);margin-bottom:0.4rem}
-      .footer-logo em{font-style:italic;font-weight:600}
-      .footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--rose3);font-size:0.9rem;margin-bottom:1.2rem}
-      .footer-social{display:inline-flex;align-items:center;gap:0.5rem;color:var(--rose3);text-decoration:none;font-size:0.82rem;margin-bottom:1.2rem;transition:color 0.25s}
-      .footer-social:hover{color:var(--cream)}
-      .footer-divider{width:60px;height:1px;background:rgba(255,255,255,0.2);margin:0 auto 1.2rem}
-      .footer-bottom{color:rgba(245,240,232,0.4);font-size:0.72rem;letter-spacing:0.06em}
-
-      @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-      @keyframes scrollPulse{0%,100%{opacity:0.3}50%{opacity:1}}
-
-      @media(max-width:900px){
-        nav{padding:1rem 1.5rem}
-        .nav-links,.nav-cta{display:none}
-        .hero,#sobre,#platters,#cafes,#adicionais,#contato,.namorados-banner{padding:5rem 1.5rem 3rem}
-        .platters-grid{grid-template-columns:1fr}
-        .cafes-grid{grid-template-columns:1fr}
-        .adicionais-grid{grid-template-columns:1fr 1fr}
-        .obs-bar{padding:2rem 1.5rem}
-        footer{padding:2rem 1.5rem}
-        .modal{max-height:95vh}
-        .modal-img-wrap{height:200px}
-        .modal-body{padding:1.5rem}
-        .modal-cta{flex-direction:column;align-items:flex-start}
-      }
-      @media(max-width:500px){
-        .adicionais-grid{grid-template-columns:1fr}
-      }

@@ -7,20 +7,34 @@
 }
 
 :root {
+  /* Cores Base */
   --cream: #f5f0e8;
   --cream2: #ede7d9;
-  --green: #2d5a27;
-  --green2: #4a7c42;
-  --green3: #c8dbbf;
   --gold: #b8924a;
   --text: #2a2a1e;
   --muted: #7a7a6a;
+
+  /* Paleta Padrão / Verde */
+  --green: #2d5a27;
+  --green2: #4a7c42;
+  --green3: #c8dbbf;
   --border: rgba(45, 90, 39, 0.15);
+
+  /* Paleta Dia dos Pais — couro, uísque, carvalho */
+  --navy: #1a2e44;
+  --navy2: #2a4460;
+  --navy3: #c2cfd9;
+  --amber: #b5692a;
+  --amber2: #d4843f;
+  --amber3: #f0d9c0;
+  --oak: #3d2b1f;
+  --border-amber: rgba(181, 105, 42, 0.2);
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Jost", sans-serif;
   background: var(--cream);
@@ -126,22 +140,12 @@ nav {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      ellipse 70% 50% at 50% 80%,
-      rgba(200, 219, 191, 0.5) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 40% 40% at 10% 20%,
-      rgba(200, 219, 191, 0.3) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 40% 40% at 90% 10%,
-      rgba(200, 219, 191, 0.3) 0%,
-      transparent 60%
-    );
+    radial-gradient(ellipse 70% 50% at 50% 80%, rgba(181, 105, 42, 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 10% 20%, rgba(200, 219, 191, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 90% 10%, rgba(26, 46, 68, 0.08) 0%, transparent 60%);
 }
+
+/* Decorações Hero (Folhas & Madeira) */
 .hero-leaf-left {
   position: absolute;
   left: -40px;
@@ -158,6 +162,27 @@ nav {
   opacity: 0.18;
   transform: rotate(160deg) scaleX(-1);
 }
+.hero-wood-left {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  opacity: 0.06;
+  background: repeating-linear-gradient(170deg, var(--oak) 0px, var(--oak) 2px, transparent 2px, transparent 18px);
+  pointer-events: none;
+}
+.hero-wood-right {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  opacity: 0.06;
+  background: repeating-linear-gradient(10deg, var(--oak) 0px, var(--oak) 2px, transparent 2px, transparent 18px);
+  pointer-events: none;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -168,17 +193,17 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   font-size: 0.95rem;
-  color: var(--green2);
+  color: var(--amber2);
   letter-spacing: 0.08em;
   margin-bottom: 1.5rem;
   animation: fadeUp 0.9s ease both;
 }
 .hero-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 300;
   line-height: 1;
-  color: var(--green);
+  color: var(--navy);
   margin-bottom: 0.4rem;
   animation: fadeUp 0.9s 0.1s ease both;
 }
@@ -186,14 +211,32 @@ nav {
   display: block;
   font-weight: 700;
   font-style: italic;
+  color: var(--amber);
 }
+
+.hero-deadline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--amber);
+  color: white;
+  padding: 0.55rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 1.2rem 0 1.8rem;
+  animation: fadeUp 0.9s 0.2s ease both;
+}
+
 .hero-divider {
   display: flex;
   align-items: center;
   gap: 1rem;
   justify-content: center;
-  margin: 1.8rem auto;
-  animation: fadeUp 0.9s 0.2s ease both;
+  margin: 1.2rem auto 1.5rem;
+  animation: fadeUp 0.9s 0.25s ease both;
 }
 .hero-divider::before,
 .hero-divider::after {
@@ -201,9 +244,10 @@ nav {
   flex: 1;
   max-width: 80px;
   height: 1px;
-  background: var(--green2);
+  background: var(--amber2);
   opacity: 0.5;
 }
+
 .hero-tagline {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
@@ -221,6 +265,8 @@ nav {
   flex-wrap: wrap;
   animation: fadeUp 0.9s 0.4s ease both;
 }
+
+/* Botões */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -246,16 +292,26 @@ nav {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(45, 90, 39, 0.25);
 }
+.btn-navy {
+  background: var(--navy);
+  color: var(--cream);
+}
+.btn-navy:hover {
+  background: var(--navy2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26, 46, 68, 0.28);
+}
 .btn-outline {
   background: transparent;
-  color: var(--green);
-  border: 1.5px solid var(--green);
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
 }
 .btn-outline:hover {
-  background: var(--green);
+  background: var(--navy);
   color: var(--cream);
   transform: translateY(-2px);
 }
+
 .hero-scroll {
   position: absolute;
   bottom: 2.5rem;
@@ -274,11 +330,11 @@ nav {
 .scroll-line {
   width: 1px;
   height: 40px;
-  background: linear-gradient(to bottom, var(--green2), transparent);
+  background: linear-gradient(to bottom, var(--amber2), transparent);
   animation: scrollPulse 2s infinite;
 }
 
-/* ── SOBRE ── */
+/* ── SOBRE / BANNER PAIS ── */
 #sobre {
   background: var(--green);
   padding: 5rem 3rem;
@@ -335,7 +391,97 @@ nav {
   letter-spacing: 0.06em;
 }
 
-/* ── SECTIONS ── */
+/* Banner Especial Pais */
+section#sobre,
+.pais-banner {
+  background: linear-gradient(135deg, var(--oak) 0%, var(--navy) 60%, #0e1e30 100%) !important;
+  padding: 5rem 3rem !important;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+section#sobre::before,
+.pais-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(100deg, rgba(181,105,42,0.04) 0px, rgba(181,105,42,0.04) 1px, transparent 1px, transparent 28px);
+  pointer-events: none;
+}
+
+.pb-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.pb-tag {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--amber3);
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.pb-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.pb-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--amber3);
+}
+
+.pb-desc {
+  color: rgba(245,240,232,0.75);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.pb-deadline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--amber);
+  color: white;
+  padding: 0.65rem 1.6rem;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 2rem;
+}
+
+.sobre-pills {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--cream);
+  padding: 0.5rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+/* ── SECTIONS BASE ── */
 .section-wrap {
   max-width: 1100px;
   margin: 0 auto;
@@ -348,7 +494,7 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   font-size: 0.9rem;
-  color: var(--green2);
+  color: var(--amber2);
   letter-spacing: 0.1em;
   margin-bottom: 0.8rem;
   display: block;
@@ -357,7 +503,7 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
-  color: var(--green);
+  color: var(--navy);
   line-height: 1.15;
 }
 .section-sub {
@@ -378,24 +524,21 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
-
 .platter-card {
   background: white;
   border: 1px solid var(--border);
   border-radius: 4px;
   overflow: hidden;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   cursor: pointer;
 }
 .platter-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(45, 90, 39, 0.12);
+  box-shadow: 0 16px 40px rgba(26, 46, 68, 0.12);
 }
 .platter-card-top {
-  background: var(--green);
+  background: var(--navy);
   padding: 1.5rem 1.8rem 1.2rem;
   position: relative;
   overflow: hidden;
@@ -419,7 +562,7 @@ nav {
 }
 .platter-serves {
   font-size: 0.75rem;
-  color: var(--green3);
+  color: var(--navy3);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -442,19 +585,21 @@ nav {
   font-weight: 300;
   font-style: italic;
 }
-.platter-card.featured .platter-card-top {
-  background: var(--gold);
-}
+
+/* Destaques de Platter */
 .platter-card.featured {
-  border-color: var(--gold);
-  box-shadow: 0 4px 20px rgba(184, 146, 74, 0.15);
+  border-color: var(--amber);
+  box-shadow: 0 4px 20px rgba(181, 105, 42, 0.18);
+}
+.platter-card.featured .platter-card-top {
+  background: var(--amber);
 }
 .featured-badge {
   position: absolute;
   top: -1px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--gold);
+  background: var(--amber);
   color: white;
   font-size: 0.65rem;
   letter-spacing: 0.1em;
@@ -463,12 +608,33 @@ nav {
   border-radius: 0 0 4px 4px;
   font-weight: 500;
 }
+.platter-card.pais-special {
+  border-color: var(--amber);
+  box-shadow: 0 4px 24px rgba(181, 105, 42, 0.2);
+}
+.platter-card.pais-special .platter-card-top {
+  background: linear-gradient(135deg, var(--oak), var(--navy));
+}
+.pais-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.8rem;
+  border-radius: 100px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
 .card-click-hint {
   display: flex;
   align-items: center;
   gap: 0.4rem;
   font-size: 0.72rem;
-  color: var(--green2);
+  color: var(--amber2);
   margin-top: 1rem;
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -495,23 +661,21 @@ nav {
   padding: 2rem;
   display: flex;
   gap: 1.5rem;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
 }
 .cafe-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(45, 90, 39, 0.1);
+  box-shadow: 0 12px 32px rgba(26, 46, 68, 0.1);
 }
 .cafe-accent {
   width: 4px;
   border-radius: 4px;
-  background: var(--green);
+  background: var(--navy);
   flex-shrink: 0;
 }
 .cafe-card.brunch .cafe-accent {
-  background: var(--gold);
+  background: var(--amber);
 }
 .cafe-content {
   flex: 1;
@@ -520,7 +684,7 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--green);
+  color: var(--navy);
   margin-bottom: 0.2rem;
 }
 .cafe-meta {
@@ -533,7 +697,7 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--amber);
 }
 .cafe-serves {
   font-size: 0.72rem;
@@ -564,13 +728,11 @@ nav {
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 1.5rem;
-  transition:
-    border-color 0.3s,
-    transform 0.3s;
+  transition: border-color 0.3s, transform 0.3s;
   cursor: pointer;
 }
 .adicional-card:hover {
-  border-color: var(--green2);
+  border-color: var(--amber2);
   transform: translateY(-3px);
 }
 .adicional-icon {
@@ -581,13 +743,13 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--green);
+  color: var(--navy);
   margin-bottom: 0.4rem;
 }
 .adicional-price {
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--gold);
+  color: var(--amber);
   margin-bottom: 0.5rem;
 }
 .adicional-desc {
@@ -597,16 +759,10 @@ nav {
   font-style: italic;
 }
 .adicional-card.adicional-new {
-  border-color: var(--gold); /* Destaque na borda */
-  background: linear-gradient(
-    to bottom,
-    #fffef9,
-    white
-  ); /* Fundo levemente diferenciado */
+  border-color: var(--amber);
+  background: linear-gradient(to bottom, #fdf8f2, white);
   position: relative;
 }
-
-/* Opcional: Adiciona uma pequena "tag" de Novo */
 .adicional-card.adicional-new::after {
   content: "NOVO";
   position: absolute;
@@ -614,17 +770,17 @@ nav {
   right: 0.5rem;
   font-size: 0.6rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--amber);
   letter-spacing: 0.05rem;
 }
 .adicional-card.adicional-new:hover {
-  border-color: var(--gold);
-  box-shadow: 0 4px 12px rgba(var(--gold-rgb), 0.15);
+  border-color: var(--amber2);
+  box-shadow: 0 4px 12px rgba(181, 105, 42, 0.15);
 }
 
 /* ── OBS BAR ── */
 .obs-bar {
-  background: var(--green2);
+  background: var(--navy2);
   padding: 2.5rem 3rem;
   text-align: center;
 }
@@ -657,13 +813,14 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: 300;
-  color: var(--green);
+  color: var(--navy);
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 .cta-title em {
   font-style: italic;
   font-weight: 600;
+  color: var(--amber);
 }
 .cta-sub {
   color: var(--muted);
@@ -706,7 +863,7 @@ nav {
 
 /* ── FOOTER ── */
 footer {
-  background: var(--green);
+  background: var(--oak);
   padding: 3rem;
   text-align: center;
 }
@@ -724,7 +881,7 @@ footer {
 .footer-tagline {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
-  color: var(--green3);
+  color: var(--amber3);
   font-size: 0.9rem;
   margin-bottom: 1.2rem;
 }
@@ -732,7 +889,7 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--green3);
+  color: var(--amber3);
   text-decoration: none;
   font-size: 0.82rem;
   margin-bottom: 1.2rem;
@@ -753,14 +910,12 @@ footer {
   letter-spacing: 0.06em;
 }
 
-/* ════════════════════════════════════
-         MODAL / POP-UP
-      ════════════════════════════════════ */
+/* ── MODAL / POP-UP ── */
 .modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 500;
-  background: rgba(20, 30, 15, 0.65);
+  background: rgba(10, 18, 28, 0.7);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -774,7 +929,6 @@ footer {
   opacity: 1;
   pointer-events: all;
 }
-
 .modal {
   background: var(--cream);
   border-radius: 6px;
@@ -785,17 +939,16 @@ footer {
   position: relative;
   transform: translateY(30px) scale(0.97);
   transition: transform 0.35s ease;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
 }
 .modal-overlay.active .modal {
   transform: translateY(0) scale(1);
 }
 
-/* Imagem do modal */
 .modal-img-wrap {
   width: 100%;
   height: 360px;
-  background: var(--green3);
+  background: var(--amber3);
   position: relative;
   overflow: hidden;
   border-radius: 6px 6px 0 0;
@@ -806,7 +959,6 @@ footer {
   object-fit: cover;
   display: block;
 }
-/* Placeholder enquanto não há foto */
 .modal-img-placeholder {
   width: 100%;
   height: 100%;
@@ -815,8 +967,8 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  background: linear-gradient(135deg, var(--green3) 0%, #a8c8a0 100%);
-  color: var(--green);
+  background: linear-gradient(135deg, var(--amber3) 0%, #d4b896 100%);
+  color: var(--amber);
 }
 .modal-img-placeholder span:first-child {
   font-size: 3rem;
@@ -829,12 +981,11 @@ footer {
   letter-spacing: 0.06em;
 }
 
-/* Tag de categoria no canto da imagem */
 .modal-category-tag {
   position: absolute;
   bottom: 1rem;
   left: 1.2rem;
-  background: var(--green);
+  background: var(--navy);
   color: var(--cream);
   font-size: 0.65rem;
   letter-spacing: 0.1em;
@@ -844,7 +995,6 @@ footer {
   font-weight: 500;
 }
 
-/* Controles do carrossel de fotos */
 .modal-carousel-controls {
   display: flex;
   align-items: center;
@@ -852,14 +1002,14 @@ footer {
   gap: 1.5rem;
   padding: 0.8rem 1.2rem;
   background: rgba(245, 240, 232, 0.95);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-amber);
 }
 .carousel-arrow {
   width: 36px;
   height: 36px;
-  border: 1.5px solid var(--green);
+  border: 1.5px solid var(--navy);
   background: transparent;
-  color: var(--green);
+  color: var(--navy);
   font-size: 1.4rem;
   font-weight: 300;
   cursor: pointer;
@@ -870,7 +1020,7 @@ footer {
   transition: all 0.2s;
 }
 .carousel-arrow:hover {
-  background: var(--green);
+  background: var(--navy);
   color: var(--cream);
 }
 .carousel-arrow:disabled {
@@ -892,7 +1042,6 @@ footer {
   text-align: center;
 }
 
-/* Fechar */
 .modal-close {
   position: absolute;
   top: 1rem;
@@ -915,11 +1064,9 @@ footer {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* Corpo do modal */
 .modal-body {
   padding: 2rem 2.2rem 2.5rem;
 }
-
 .modal-header {
   margin-bottom: 1.2rem;
 }
@@ -927,7 +1074,7 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--green);
+  color: var(--navy);
   line-height: 1.1;
   margin-bottom: 0.3rem;
 }
@@ -941,29 +1088,27 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--amber);
 }
 .modal-serves {
   font-size: 0.75rem;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background: var(--cream2);
+  background: var(--amber3);
   padding: 0.3rem 0.8rem;
   border-radius: 100px;
 }
-
 .modal-divider {
   height: 1px;
-  background: var(--border);
+  background: var(--border-amber);
   margin: 1.2rem 0;
 }
-
 .modal-desc-label {
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--green2);
+  color: var(--amber2);
   font-weight: 500;
   margin-bottom: 0.7rem;
 }
@@ -975,7 +1120,6 @@ footer {
   line-height: 1.85;
 }
 
-/* Lista de ingredientes */
 .modal-ingredients {
   display: flex;
   flex-wrap: wrap;
@@ -984,14 +1128,13 @@ footer {
 }
 .ingredient-tag {
   background: white;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-amber);
   color: var(--text);
   font-size: 0.75rem;
   padding: 0.3rem 0.75rem;
   border-radius: 100px;
 }
 
-/* Botão de pedido no modal */
 .modal-cta {
   margin-top: 1.8rem;
   display: flex;
@@ -1040,8 +1183,7 @@ footer {
   }
 }
 @keyframes scrollPulse {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 0.3;
   }
   50% {
@@ -1063,12 +1205,11 @@ footer {
   #platters,
   #cafes,
   #adicionais,
-  #contato {
+  #contato,
+  .pais-banner {
     padding: 5rem 1.5rem 3rem;
   }
-  .platters-grid {
-    grid-template-columns: 1fr;
-  }
+  .platters-grid,
   .cafes-grid {
     grid-template-columns: 1fr;
   }
@@ -1095,6 +1236,7 @@ footer {
     align-items: flex-start;
   }
 }
+
 @media (max-width: 500px) {
   .adicionais-grid {
     grid-template-columns: 1fr;

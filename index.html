@@ -747,7 +747,6 @@
         </div>
       </div>
     </section>
-
     <section id="adicionais">
       <div class="section-wrap">
         <div class="section-header">
@@ -972,7 +971,7 @@
           </div>
 
           <div
-            class="adicional-card adicional-new"
+            class="adicional-card"
             onclick="
               openModal({
                 name: 'Croissant Recheado',
@@ -997,6 +996,36 @@
             <p class="adicional-desc">
               Massa semi folhada artesanal, recheada com combinações especiais.
               Pedido mínimo de 10 unidades.
+            </p>
+            <div class="card-click-hint">Clique para ver detalhes</div>
+          </div>
+          <div
+            class="adicional-card adicional-new"
+            onclick="
+              openModal({
+                name: 'Melba',
+                price: 'R$ 85,00/kg',
+                serves: 'Barquinhas vendidas separadamente',
+                category: 'Adicional',
+                img: [
+                  'img/adicionais/melba/melba_01.jpeg',
+                  'img/adicionais/melba/melba_02.jpeg',
+                ],
+                icon: '🍍',
+                desc: 'Creme aveludado à base de cream cheese, combinado com abacaxi caramelizado e acompanhado de crocante de bacon.',
+                ingredients: [
+                  'Melba — R$ 85,00/kg',
+                  'Caixinha com 40 barquinhas — R$ 30,00',
+                ],
+              })
+            "
+          >
+            <div class="adicional-icon">🍍</div>
+            <div class="adicional-name">Melba</div>
+            <div class="adicional-price">R$ 85,00/kg</div>
+            <p class="adicional-desc">
+              Creme aveludado à base de cream cheese, com abacaxi caramelizado e
+              crocante de bacon.
             </p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>

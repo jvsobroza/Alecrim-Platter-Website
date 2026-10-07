@@ -548,7 +548,448 @@ nav {
   font-style: italic;
   font-weight: 300;
 }
+/* ══════════════════════════════════════
+   ESPECIAL DIA DAS CRIANÇAS
+══════════════════════════════════════ */
 
+#dia-das-criancas {
+  --kids-pink: #f29bbb;
+  --kids-pink-light: #fff0f5;
+
+  --kids-blue: #69aee7;
+  --kids-blue-light: #eef8ff;
+
+  --kids-yellow: #f6d36b;
+  --kids-purple: #9a83ce;
+
+  --kids-text: #55445c;
+  --kids-muted: #786b7d;
+
+  padding: 6rem 3rem;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(242, 155, 187, 0.22) 0,
+      rgba(242, 155, 187, 0.22) 80px,
+      transparent 81px
+    ),
+    radial-gradient(
+      circle at 92% 22%,
+      rgba(105, 174, 231, 0.2) 0,
+      rgba(105, 174, 231, 0.2) 100px,
+      transparent 101px
+    ),
+    radial-gradient(
+      circle at 15% 90%,
+      rgba(246, 211, 107, 0.18) 0,
+      rgba(246, 211, 107, 0.18) 90px,
+      transparent 91px
+    ),
+    linear-gradient(135deg, #fff6f9 0%, #fffdf3 48%, #f1f9ff 100%);
+}
+
+.kids-header {
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.kids-eyebrow {
+  display: inline-block;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  color: var(--kids-purple);
+
+  margin-bottom: 1rem;
+}
+
+.kids-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  color: var(--kids-text);
+
+  margin-bottom: 1.2rem;
+}
+
+.kids-title span {
+  display: block;
+  font-style: italic;
+
+  background: linear-gradient(
+    90deg,
+    var(--kids-pink),
+    var(--kids-purple),
+    var(--kids-blue)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.kids-subtitle {
+  max-width: 620px;
+  margin: 0 auto;
+
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-weight: 300;
+
+  color: var(--kids-muted);
+}
+
+.kids-theme-options {
+  margin-top: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.kids-theme {
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+}
+
+.kids-theme-pink {
+  color: #b7557b;
+  background: #ffe5ef;
+  border: 1px solid rgba(242, 155, 187, 0.45);
+}
+
+.kids-theme-blue {
+  color: #347aad;
+  background: #e8f5ff;
+  border: 1px solid rgba(105, 174, 231, 0.45);
+}
+
+.kids-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.6rem;
+
+  position: relative;
+  z-index: 2;
+}
+
+.kids-card {
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(154, 131, 206, 0.18);
+  border-radius: 18px;
+
+  padding: 2.2rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.kids-card::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  height: 6px;
+
+  background: linear-gradient(
+    90deg,
+    var(--kids-pink),
+    var(--kids-yellow),
+    var(--kids-blue),
+    var(--kids-purple)
+  );
+}
+
+.kids-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(154, 131, 206, 0.35);
+
+  box-shadow:
+    0 18px 45px rgba(93, 78, 116, 0.12),
+    0 5px 15px rgba(93, 78, 116, 0.06);
+}
+
+.kids-card-decoration {
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  right: -55px;
+  bottom: -55px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(242, 155, 187, 0.13),
+    rgba(105, 174, 231, 0.13)
+  );
+
+  pointer-events: none;
+}
+
+.kids-card-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1.2rem;
+
+  border-radius: 15px;
+
+  font-size: 1.5rem;
+
+  background: linear-gradient(135deg, var(--kids-pink-light), #fff9dc);
+}
+
+.kids-card-special .kids-card-icon {
+  background: linear-gradient(135deg, #eef8ff, #f1ecff);
+}
+
+.kids-card-label {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  font-size: 0.67rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--kids-purple);
+}
+
+.kids-card-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  color: var(--kids-text);
+
+  margin-bottom: 0.25rem;
+}
+
+.kids-card-price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+
+  color: #cc668d;
+
+  margin-bottom: 1rem;
+}
+
+.kids-card-special .kids-card-price {
+  color: #4388ba;
+}
+
+.kids-card-desc {
+  max-width: 480px;
+
+  font-size: 0.84rem;
+  line-height: 1.8;
+  font-weight: 300;
+
+  color: var(--kids-muted);
+}
+
+/* Temas dentro do card */
+
+.kids-card-themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  margin-top: 1.2rem;
+}
+
+.kids-mini-theme {
+  padding: 0.3rem 0.75rem;
+
+  border-radius: 100px;
+
+  font-size: 0.68rem;
+  font-weight: 500;
+}
+
+.kids-mini-theme.pink {
+  background: #fff0f5;
+  color: #bd5f83;
+}
+
+.kids-mini-theme.blue {
+  background: #edf7ff;
+  color: #397da9;
+}
+
+.kids-special-badge {
+  position: absolute;
+
+  top: 1.2rem;
+  right: 1.2rem;
+
+  padding: 0.35rem 0.75rem;
+
+  border-radius: 100px;
+
+  background: #fff4c8;
+  color: #9c7820;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+}
+
+.kids-card-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  margin-top: 1.4rem;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  color: var(--kids-purple);
+}
+
+.kids-card-hint::before {
+  content: "👆";
+}
+
+.kids-order-box {
+  margin-top: 2rem;
+
+  padding: 2rem 2.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  border-radius: 18px;
+
+  background: linear-gradient(120deg, #ee91b4 0%, #a184d2 48%, #65a9df 100%);
+
+  box-shadow: 0 15px 40px rgba(99, 82, 125, 0.14);
+
+  position: relative;
+  z-index: 2;
+}
+
+.kids-order-text {
+  max-width: 650px;
+}
+
+.kids-order-text > span {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.kids-order-text h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.65rem;
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  color: white;
+
+  margin-bottom: 0.4rem;
+}
+
+.kids-order-text p {
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.82rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.kids-order-btn {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.9rem 1.6rem;
+
+  border-radius: 100px;
+
+  background: white;
+  color: #765e9b;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.kids-order-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(68, 51, 90, 0.22);
+}
 /* ── ADICIONAIS ── */
 #adicionais {
   padding: 6rem 3rem;
@@ -1054,6 +1495,14 @@ footer {
   nav {
     padding: 1rem 1.5rem;
   }
+  .kids-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kids-order-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .nav-links,
   .nav-cta {
     display: none;
@@ -1061,6 +1510,7 @@ footer {
   .hero,
   #sobre,
   #platters,
+  #dia-das-criancas,
   #cafes,
   #adicionais,
   #contato {
@@ -1098,5 +1548,877 @@ footer {
 @media (max-width: 500px) {
   .adicionais-grid {
     grid-template-columns: 1fr;
+  }
+  .kids-card {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+
+  .kids-special-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .kids-order-box {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+
+  .kids-order-btn {
+    width: 100%;
+  }
+}
+
+/* Modal dia das crianças */
+.modal.modal-kids {
+  --kids-pink: #ec8fb3;
+  --kids-pink-light: #fff0f6;
+
+  --kids-blue: #69afe5;
+  --kids-blue-light: #eef8ff;
+
+  --kids-yellow: #f2cb62;
+  --kids-yellow-light: #fff9df;
+
+  --kids-purple: #967cca;
+  --kids-purple-light: #f4efff;
+
+  --kids-text: #51445c;
+
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(105, 175, 229, 0.13),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 70% 100%,
+      rgba(236, 143, 179, 0.12),
+      transparent 30%
+    ),
+    #fffaf5;
+
+  border: 1px solid rgba(150, 124, 202, 0.22);
+
+  box-shadow:
+    0 30px 90px rgba(93, 72, 120, 0.22),
+    0 8px 30px rgba(236, 143, 179, 0.1);
+}
+
+.modal.modal-kids::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 6px;
+
+  background: linear-gradient(
+    90deg,
+    var(--kids-pink),
+    var(--kids-yellow),
+    var(--kids-blue),
+    var(--kids-purple),
+    var(--kids-pink)
+  );
+
+  z-index: 30;
+}
+
+.modal.modal-kids .modal-media {
+  background: linear-gradient(145deg, #fff0f6, #fff9df 50%, #eef8ff);
+
+  border-right-color: rgba(150, 124, 202, 0.18);
+}
+
+.modal.modal-kids .modal-category-tag {
+  background: linear-gradient(90deg, var(--kids-pink), var(--kids-purple));
+
+  color: white;
+
+  border: none;
+
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  box-shadow: 0 4px 12px rgba(150, 124, 202, 0.22);
+}
+
+.modal.modal-kids .modal-body {
+  background: transparent;
+}
+
+.modal.modal-kids .modal-header::before {
+  content: "🎈 ESPECIAL DIA DAS CRIANÇAS";
+
+  display: inline-block;
+
+  margin-bottom: 0.75rem;
+
+  padding: 0.35rem 0.8rem;
+
+  border-radius: 100px;
+
+  background: linear-gradient(
+    90deg,
+    var(--kids-pink-light),
+    var(--kids-purple-light)
+  );
+
+  color: var(--kids-purple);
+
+  font-family: "Jost", sans-serif;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.modal.modal-kids .modal-name {
+  color: var(--kids-text);
+}
+
+.modal.modal-kids .modal-price {
+  color: #d17296;
+}
+
+.modal.modal-kids .modal-serves {
+  color: #765aa8;
+
+  background: linear-gradient(
+    90deg,
+    var(--kids-yellow-light),
+    var(--kids-purple-light)
+  );
+
+  border: 1px solid rgba(150, 124, 202, 0.15);
+}
+
+.modal.modal-kids .modal-divider {
+  background: linear-gradient(
+    90deg,
+    rgba(236, 143, 179, 0.35),
+    rgba(105, 175, 229, 0.35),
+    transparent
+  );
+}
+
+.modal.modal-kids .modal-desc-label {
+  color: var(--kids-purple);
+}
+
+.modal.modal-kids .modal-desc {
+  color: #766c7c;
+}
+
+.modal.modal-kids .ingredient-tag {
+  border-color: rgba(150, 124, 202, 0.18);
+
+  box-shadow: 0 2px 8px rgba(85, 68, 100, 0.035);
+}
+
+.modal.modal-kids .ingredient-tag:nth-child(4n + 1) {
+  background: var(--kids-pink-light);
+}
+
+.modal.modal-kids .ingredient-tag:nth-child(4n + 2) {
+  background: var(--kids-blue-light);
+}
+
+.modal.modal-kids .ingredient-tag:nth-child(4n + 3) {
+  background: var(--kids-yellow-light);
+}
+
+.modal.modal-kids .ingredient-tag:nth-child(4n + 4) {
+  background: var(--kids-purple-light);
+}
+
+.modal.modal-kids .ingredient-tag::before {
+  color: var(--kids-purple);
+}
+
+.modal.modal-kids .modal-carousel-controls {
+  background: #fffaf5;
+  border-top-color: rgba(150, 124, 202, 0.16);
+}
+
+.modal.modal-kids .carousel-arrow {
+  color: var(--kids-purple);
+  border-color: var(--kids-purple);
+  background: white;
+}
+
+.modal.modal-kids .carousel-arrow:not(:disabled):hover {
+  background: var(--kids-purple);
+  color: white;
+}
+
+.modal.modal-kids .carousel-indicator {
+  color: #786a82;
+}
+
+.modal.modal-kids .modal-close {
+  background: rgba(122, 92, 151, 0.74);
+}
+
+.modal.modal-kids .modal-close:hover {
+  background: var(--kids-purple);
+}
+
+.modal.modal-kids .modal-cta {
+  border-top-color: rgba(150, 124, 202, 0.18);
+}
+
+.modal.modal-kids .modal-whatsapp {
+  background: linear-gradient(90deg, #ec8fb3, #967cca);
+
+  box-shadow: 0 6px 18px rgba(150, 124, 202, 0.2);
+}
+
+.modal.modal-kids .modal-whatsapp:hover {
+  background: linear-gradient(90deg, #df7ca3, #876bbd);
+
+  box-shadow: 0 9px 24px rgba(150, 124, 202, 0.28);
+}
+
+.modal.modal-kids .modal-img-wrap {
+  position: relative;
+  background-color: #f8edf3;
+}
+
+.modal.modal-kids .modal-img-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+
+  background: inherit;
+
+  filter: blur(22px);
+  transform: scale(1.08);
+
+  opacity: 0.48;
+
+  z-index: 0;
+}
+
+.modal.modal-kids .modal-img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 236, 245, 0.18),
+    rgba(239, 248, 255, 0.16)
+  );
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.modal.modal-kids .modal-img-wrap img {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 0;
+}
+
+.modal.modal-kids .modal-category-tag {
+  z-index: 3;
+}
+/* Destaque Dia das Crianças no início do site */
+
+.kids-home-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+
+  margin-bottom: 1.4rem;
+  padding: 0.7rem 1rem;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 232, 241, 0.95),
+    rgba(255, 248, 214, 0.95),
+    rgba(231, 244, 255, 0.95)
+  );
+
+  border: 1px solid rgba(150, 124, 202, 0.22);
+  border-radius: 100px;
+
+  text-decoration: none;
+
+  box-shadow: 0 6px 20px rgba(93, 72, 120, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.kids-home-highlight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(93, 72, 120, 0.14);
+}
+
+.kids-home-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: white;
+
+  font-size: 1.15rem;
+}
+
+.kids-home-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.kids-home-content strong {
+  color: #70548f;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+}
+
+.kids-home-content small {
+  color: #8c718c;
+
+  font-size: 0.68rem;
+  font-weight: 400;
+
+  margin-top: 0.15rem;
+}
+
+.kids-home-arrow {
+  color: #9276bd;
+
+  font-size: 1.1rem;
+
+  margin-left: 0.2rem;
+}
+
+@media (max-width: 500px) {
+  .kids-home-highlight {
+    border-radius: 16px;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .kids-home-content small {
+    font-size: 0.64rem;
+  }
+}
+/* ════════════════════════════════════════════════
+   HERO — ESPECIAL DIA DAS CRIANÇAS
+════════════════════════════════════════════════ */
+
+.hero-kids {
+  --kids-pink: #eb8fb5;
+  --kids-pink-soft: #fde6ef;
+
+  --kids-blue: #72afe2;
+  --kids-blue-soft: #e4f2fc;
+
+  --kids-yellow: #f1cc65;
+  --kids-yellow-soft: #fff2bd;
+
+  --kids-purple: #9d84cf;
+  --kids-purple-soft: #eee7fa;
+
+  --kids-dark: #51465a;
+
+  position: relative;
+  overflow: hidden;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8rem 2rem 6rem;
+
+  background: linear-gradient(
+    135deg,
+    #fffaf5 0%,
+    #fff7fa 40%,
+    #f6f4ff 70%,
+    #f1f9ff 100%
+  );
+}
+
+/* ─────────────────────────────────────
+   FUNDO
+───────────────────────────────────── */
+
+.hero-kids .hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 12% 25%,
+      rgba(235, 143, 181, 0.22),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 88% 22%,
+      rgba(114, 175, 226, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 20% 90%,
+      rgba(241, 204, 101, 0.2),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(157, 132, 207, 0.18),
+      transparent 28%
+    );
+
+  z-index: 0;
+}
+
+/* Desativa as folhas tradicionais do Hero */
+.hero-kids .hero-leaf-left,
+.hero-kids .hero-leaf-right {
+  display: none;
+}
+
+/* ─────────────────────────────────────
+   BOLHAS DECORATIVAS
+───────────────────────────────────── */
+
+.kids-decor {
+  position: absolute;
+
+  border-radius: 50%;
+
+  opacity: 0.32;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.kids-decor-pink {
+  width: 280px;
+  height: 280px;
+
+  left: -100px;
+  top: 18%;
+
+  background: var(--kids-pink-soft);
+}
+
+.kids-decor-blue {
+  width: 340px;
+  height: 340px;
+
+  right: -140px;
+  top: 8%;
+
+  background: var(--kids-blue-soft);
+}
+
+.kids-decor-yellow {
+  width: 220px;
+  height: 220px;
+
+  left: 8%;
+  bottom: -110px;
+
+  background: var(--kids-yellow-soft);
+}
+
+.kids-decor-purple {
+  width: 270px;
+  height: 270px;
+
+  right: 4%;
+  bottom: -130px;
+
+  background: var(--kids-purple-soft);
+}
+
+/* ─────────────────────────────────────
+   CONFETES
+───────────────────────────────────── */
+
+.kids-confetti {
+  position: absolute;
+
+  font-size: 1rem;
+
+  opacity: 0.55;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  animation: kidsFloat 5s ease-in-out infinite;
+}
+
+.kids-confetti-1 {
+  left: 12%;
+  top: 20%;
+  color: var(--kids-pink);
+}
+
+.kids-confetti-2 {
+  left: 22%;
+  top: 72%;
+  color: var(--kids-yellow);
+  animation-delay: 0.8s;
+}
+
+.kids-confetti-3 {
+  right: 17%;
+  top: 24%;
+  color: var(--kids-blue);
+  animation-delay: 1.3s;
+}
+
+.kids-confetti-4 {
+  right: 10%;
+  top: 65%;
+  color: var(--kids-purple);
+  animation-delay: 0.4s;
+}
+
+.kids-confetti-5 {
+  left: 7%;
+  top: 52%;
+  color: var(--kids-blue);
+  animation-delay: 1.8s;
+}
+
+.kids-confetti-6 {
+  right: 28%;
+  bottom: 13%;
+  color: var(--kids-pink);
+  animation-delay: 1s;
+}
+
+@keyframes kidsFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+/* ─────────────────────────────────────
+   CONTEÚDO
+───────────────────────────────────── */
+
+.hero-kids .hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 780px;
+
+  text-align: center;
+}
+
+/* Badge */
+
+.hero-kids-badge {
+  color: var(--kids-purple) !important;
+
+  margin-bottom: 1.1rem !important;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 0.12em;
+}
+
+/* Título */
+
+.hero-kids-title {
+  color: var(--kids-dark) !important;
+
+  font-size: clamp(3.6rem, 9vw, 7rem) !important;
+
+  line-height: 0.9 !important;
+
+  margin-bottom: 1.3rem !important;
+}
+
+.hero-kids-title strong {
+  display: block;
+
+  color: var(--kids-pink) !important;
+
+  font-weight: 700;
+
+  font-style: italic;
+
+  margin-top: 0.15em;
+}
+
+/* ─────────────────────────────────────
+   ENCOMENDAS ABERTAS
+───────────────────────────────────── */
+
+.hero-kids-open {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.6rem 1.3rem;
+
+  margin: 0.3rem 0 1.4rem;
+
+  border-radius: 100px;
+
+  background: linear-gradient(90deg, var(--kids-pink), var(--kids-purple));
+
+  color: white;
+
+  font-size: 0.75rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  box-shadow: 0 6px 18px rgba(157, 132, 207, 0.2);
+}
+
+/* ─────────────────────────────────────
+   DIVISOR
+───────────────────────────────────── */
+
+.hero-kids-divider {
+  margin: 0.5rem auto 1.4rem !important;
+}
+
+.hero-kids-divider::before {
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--kids-pink)
+  ) !important;
+}
+
+.hero-kids-divider::after {
+  background: linear-gradient(
+    to left,
+    transparent,
+    var(--kids-blue)
+  ) !important;
+}
+
+.hero-kids-divider span {
+  color: var(--kids-yellow);
+
+  font-size: 1rem;
+}
+
+/* ─────────────────────────────────────
+   TEXTO
+───────────────────────────────────── */
+
+.hero-kids-tagline {
+  max-width: 650px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  color: #706675 !important;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+
+  line-height: 1.65 !important;
+}
+
+/* ─────────────────────────────────────
+   TEMAS
+───────────────────────────────────── */
+
+.hero-kids-themes {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 0.7rem;
+
+  margin: 1.6rem 0 1.8rem;
+}
+
+.hero-kids-theme {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 0.55rem 1rem;
+
+  border-radius: 100px;
+
+  font-size: 0.72rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+}
+
+.theme-kitty {
+  color: #bc6688;
+
+  background: var(--kids-pink-soft);
+
+  border: 1px solid rgba(235, 143, 181, 0.3);
+}
+
+.theme-sonic {
+  color: #5289b7;
+
+  background: var(--kids-blue-soft);
+
+  border: 1px solid rgba(114, 175, 226, 0.32);
+}
+
+/* ─────────────────────────────────────
+   BOTÕES
+───────────────────────────────────── */
+
+.hero-kids .hero-btns {
+  margin-top: 0.5rem;
+}
+
+.btn-kids {
+  background: linear-gradient(90deg, var(--kids-pink), var(--kids-purple));
+
+  color: white;
+
+  border: 1.5px solid transparent;
+
+  box-shadow: 0 8px 25px rgba(157, 132, 207, 0.2);
+}
+
+.btn-kids:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 30px rgba(157, 132, 207, 0.3);
+}
+
+.btn-kids-outline {
+  background: rgba(255, 255, 255, 0.58);
+
+  color: var(--kids-purple);
+
+  border: 1.5px solid var(--kids-purple);
+}
+
+.btn-kids-outline:hover {
+  background: var(--kids-purple);
+
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+/* ─────────────────────────────────────
+   SCROLL
+───────────────────────────────────── */
+
+.hero-kids-scroll {
+  color: #9a8ca0;
+}
+
+.hero-kids-scroll .scroll-line {
+  background: linear-gradient(
+    to bottom,
+    var(--kids-purple),
+    transparent
+  ) !important;
+}
+
+/* ─────────────────────────────────────
+   MOBILE
+───────────────────────────────────── */
+
+@media (max-width: 700px) {
+  .hero-kids {
+    min-height: 100vh;
+
+    padding: 8rem 1.4rem 5rem;
+  }
+
+  .hero-kids-title {
+    font-size: clamp(3.3rem, 17vw, 5rem) !important;
+  }
+
+  .hero-kids-tagline {
+    font-size: 1rem;
+  }
+
+  .hero-kids-themes {
+    margin: 1.3rem 0 1.6rem;
+  }
+
+  .hero-kids .hero-btns {
+    flex-direction: column;
+
+    width: 100%;
+
+    max-width: 310px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-kids .hero-btns .btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .kids-decor-pink {
+    width: 180px;
+    height: 180px;
+  }
+
+  .kids-decor-blue {
+    width: 210px;
+    height: 210px;
+  }
+
+  .kids-confetti {
+    opacity: 0.4;
   }
 }

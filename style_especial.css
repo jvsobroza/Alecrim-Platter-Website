@@ -1,0 +1,701 @@
+/* =========================================================
+   ALECRIM PLATTERS — TEMA SAZONAL DIA DAS CRIANÇAS
+   Adicione este arquivo DEPOIS do style.css.
+   O modal não é alterado por este tema.
+========================================================= */
+
+.theme-kids {
+  --kids-green: #2d5a27;
+  --kids-green-2: #4a6f4d;
+  --kids-sage: #b8c9ad;
+
+  --kids-rose: #d98ca5;
+  --kids-rose-2: #c97895;
+  --kids-rose-soft: #f7e7ed;
+
+  --kids-blue: #8eb8cf;
+  --kids-blue-soft: #e9f3f8;
+
+  --kids-yellow: #e3c66f;
+  --kids-yellow-soft: #faf2d7;
+
+  --kids-cream: #f5f0e8;
+  --kids-cream-2: #eee8dd;
+
+  --kids-text: #344137;
+  --kids-muted: #7e776f;
+}
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+.theme-kids nav {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 240, 232, 0.96),
+    rgba(247, 231, 237, 0.88),
+    rgba(233, 243, 248, 0.82),
+    rgba(245, 240, 232, 0.96)
+  );
+  border-bottom-color: rgba(217, 140, 165, 0.2);
+}
+
+.theme-kids .nav-logo {
+  color: var(--kids-green);
+}
+
+.theme-kids .nav-links a:hover,
+.theme-kids .nav-instagram:hover {
+  color: var(--kids-rose-2);
+}
+
+/* Link Especial Kids */
+.theme-kids .nav-links a[href="#dia-das-criancas"] {
+  color: var(--kids-rose-2);
+  font-weight: 600;
+  position: relative;
+}
+
+.theme-kids .nav-links a[href="#dia-das-criancas"]::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--kids-yellow);
+  top: -6px;
+  right: -8px;
+}
+
+.theme-kids .nav-cta {
+  background: var(--kids-green);
+  color: white;
+}
+
+.theme-kids .nav-cta:hover {
+  background: var(--kids-green-2);
+}
+
+/* =========================================================
+   HERO — DIA DAS CRIANÇAS
+========================================================= */
+
+.theme-kids .hero-kids {
+  background: var(--kids-cream);
+  isolation: isolate;
+}
+
+.theme-kids .hero-kids .hero-bg {
+  background:
+    radial-gradient(
+      ellipse 48% 48% at 13% 24%,
+      rgba(217, 140, 165, 0.24) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 44% 44% at 88% 20%,
+      rgba(142, 184, 207, 0.25) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 42% 35% at 18% 88%,
+      rgba(227, 198, 111, 0.2) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 44% 38% at 84% 84%,
+      rgba(184, 201, 173, 0.28) 0%,
+      transparent 70%
+    );
+}
+
+/* Mantém o elemento botânico da Alecrim, mas tematizado */
+.theme-kids .hero-kids .hero-leaf-left {
+  opacity: 0.11;
+}
+
+.theme-kids .hero-kids .hero-leaf-right {
+  opacity: 0.12;
+}
+
+.theme-kids .hero-kids .hero-leaf-left path:first-child {
+  fill: var(--kids-rose);
+}
+
+.theme-kids .hero-kids .hero-leaf-right path:first-child {
+  fill: var(--kids-blue);
+}
+
+.theme-kids .hero-kids .hero-leaf-left path:not(:first-child),
+.theme-kids .hero-kids .hero-leaf-right path:not(:first-child) {
+  stroke: var(--kids-green);
+}
+
+.theme-kids .hero-kids .hero-content {
+  max-width: 790px;
+}
+
+.theme-kids .hero-kids .hero-badge {
+  color: var(--kids-rose-2);
+  margin-bottom: 1rem;
+  letter-spacing: 0.12em;
+}
+
+.theme-kids .hero-kids .hero-title {
+  color: var(--kids-green);
+  font-size: clamp(3.6rem, 9vw, 7rem);
+  line-height: 0.92;
+  margin-bottom: 1.2rem;
+}
+
+.theme-kids .hero-kids .hero-title strong {
+  color: var(--kids-rose-2);
+  display: block;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.theme-kids .hero-kids-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+
+  padding: 0.58rem 1.25rem;
+  margin: 0.25rem auto 0.9rem;
+
+  border-radius: 100px;
+
+  background: var(--kids-yellow-soft);
+  border: 1px solid rgba(227, 198, 111, 0.62);
+
+  color: var(--kids-green);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  box-shadow: 0 6px 18px rgba(84, 76, 55, 0.07);
+}
+
+.theme-kids .hero-kids .hero-divider {
+  margin: 1.25rem auto 1.35rem;
+}
+
+.theme-kids .hero-kids .hero-divider::before {
+  background: linear-gradient(to right, transparent, var(--kids-rose));
+}
+
+.theme-kids .hero-kids .hero-divider::after {
+  background: linear-gradient(to left, transparent, var(--kids-blue));
+}
+
+.theme-kids .hero-kids .hero-divider-icon {
+  color: var(--kids-yellow);
+  font-size: 1.05rem;
+}
+
+.theme-kids .hero-kids .hero-tagline {
+  max-width: 620px;
+  color: #726d68;
+  margin-bottom: 1.35rem;
+}
+
+.theme-kids .hero-kids-themes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.theme-kids .hero-kids-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.48rem 1rem;
+
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.theme-kids .hero-kids-theme.kitty {
+  color: #a65e78;
+  background: var(--kids-rose-soft);
+  border: 1px solid rgba(217, 140, 165, 0.3);
+}
+
+.theme-kids .hero-kids-theme.sonic {
+  color: #5c89a0;
+  background: var(--kids-blue-soft);
+  border: 1px solid rgba(142, 184, 207, 0.36);
+}
+
+.theme-kids .hero-kids .btn-kids-primary {
+  background: var(--kids-green);
+  color: white;
+}
+
+.theme-kids .hero-kids .btn-kids-primary:hover {
+  background: var(--kids-green-2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(45, 90, 39, 0.22);
+}
+
+.theme-kids .hero-kids .btn-kids-secondary {
+  background: rgba(255, 255, 255, 0.36);
+  color: var(--kids-rose-2);
+  border: 1.5px solid var(--kids-rose-2);
+}
+
+.theme-kids .hero-kids .btn-kids-secondary:hover {
+  background: var(--kids-rose-2);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.theme-kids .hero-kids .hero-scroll {
+  color: #8d827a;
+}
+
+.theme-kids .hero-kids .scroll-line {
+  background: linear-gradient(to bottom, var(--kids-rose), transparent);
+}
+
+/* Confetes discretos */
+.theme-kids .hero-kids-confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.theme-kids .hero-kids-confetti span {
+  position: absolute;
+  opacity: 0.48;
+  font-size: 0.95rem;
+  animation: kidsFloat 5s ease-in-out infinite;
+}
+
+.theme-kids .hero-kids-confetti span:nth-child(1) {
+  top: 20%;
+  left: 13%;
+  color: var(--kids-rose);
+}
+
+.theme-kids .hero-kids-confetti span:nth-child(2) {
+  top: 68%;
+  left: 18%;
+  color: var(--kids-yellow);
+  animation-delay: 0.7s;
+}
+
+.theme-kids .hero-kids-confetti span:nth-child(3) {
+  top: 22%;
+  right: 15%;
+  color: var(--kids-blue);
+  animation-delay: 1.2s;
+}
+
+.theme-kids .hero-kids-confetti span:nth-child(4) {
+  top: 66%;
+  right: 12%;
+  color: var(--kids-rose);
+  animation-delay: 0.4s;
+}
+
+.theme-kids .hero-kids-confetti span:nth-child(5) {
+  bottom: 14%;
+  right: 30%;
+  color: var(--kids-green-2);
+  animation-delay: 1.5s;
+}
+
+@keyframes kidsFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(7deg);
+  }
+}
+
+/* =========================================================
+   SOBRE — mantém a força da marca
+========================================================= */
+
+.theme-kids #sobre {
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(217, 140, 165, 0.1),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 88% 80%,
+      rgba(142, 184, 207, 0.11),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #284f27 0%, #315b35 58%, #45674b 100%);
+}
+
+.theme-kids #sobre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08) 1px,
+    transparent 1px
+  );
+
+  background-size: 30px 30px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.theme-kids .sobre-tag {
+  color: var(--kids-yellow);
+}
+
+.theme-kids .sobre-title em {
+  color: #f0c6d3;
+}
+
+.theme-kids .pill {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* =========================================================
+   SEÇÃO DIA DAS CRIANÇAS
+========================================================= */
+
+.theme-kids #dia-das-criancas {
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(217, 140, 165, 0.16),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 92% 20%,
+      rgba(142, 184, 207, 0.17),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #fffaf7 0%, #f9f3ef 100%);
+}
+
+.theme-kids #dia-das-criancas .kids-eyebrow {
+  color: var(--kids-rose-2);
+}
+
+.theme-kids #dia-das-criancas .kids-title {
+  color: var(--kids-green);
+}
+
+.theme-kids #dia-das-criancas .kids-title span {
+  color: var(--kids-rose-2);
+}
+
+.theme-kids #dia-das-criancas .kids-subtitle {
+  color: var(--kids-muted);
+}
+
+.theme-kids #dia-das-criancas .kids-card {
+  border-color: rgba(45, 90, 39, 0.12);
+  box-shadow: 0 12px 30px rgba(50, 60, 44, 0.07);
+}
+
+.theme-kids #dia-das-criancas .kids-card-standard {
+  background: linear-gradient(180deg, #fff 0%, #fff8fa 100%);
+}
+
+.theme-kids #dia-das-criancas .kids-card-special {
+  background: linear-gradient(180deg, #fff 0%, #f7fbfd 100%);
+  border-color: rgba(142, 184, 207, 0.38);
+}
+
+.theme-kids #dia-das-criancas .kids-card-name {
+  color: var(--kids-green);
+}
+
+.theme-kids #dia-das-criancas .kids-card-price {
+  color: var(--kids-rose-2);
+}
+
+.theme-kids #dia-das-criancas .kids-special-badge {
+  background: var(--kids-yellow);
+  color: var(--kids-green);
+}
+
+.theme-kids #dia-das-criancas .kids-card-hint {
+  color: var(--kids-green-2);
+}
+
+.theme-kids #dia-das-criancas .kids-order-box {
+  background: linear-gradient(120deg, var(--kids-green) 0%, #3d6542 100%);
+}
+
+.theme-kids #dia-das-criancas .kids-order-text span {
+  color: var(--kids-yellow);
+}
+
+/* =========================================================
+   TÍTULOS DAS SEÇÕES
+========================================================= */
+
+.theme-kids .section-eyebrow {
+  color: var(--kids-rose-2);
+}
+
+.theme-kids .section-title {
+  color: var(--kids-green);
+}
+
+.theme-kids .section-sub {
+  color: var(--kids-muted);
+}
+
+/* =========================================================
+   PLATTERS
+========================================================= */
+
+.theme-kids #platters {
+  background: linear-gradient(180deg, var(--kids-cream) 0%, #f8f4ed 100%);
+}
+
+.theme-kids .platter-card {
+  border-color: rgba(45, 90, 39, 0.13);
+}
+
+.theme-kids .platter-card:hover {
+  box-shadow: 0 16px 40px rgba(73, 88, 66, 0.13);
+}
+
+.theme-kids .platter-card-top {
+  background: linear-gradient(135deg, #2b542b, #416847);
+}
+
+.theme-kids .platter-serves {
+  color: #dce8d8;
+}
+
+.theme-kids .platter-card.featured {
+  border-color: var(--kids-rose);
+  box-shadow: 0 4px 22px rgba(217, 140, 165, 0.17);
+}
+
+.theme-kids .platter-card.featured .platter-card-top {
+  background: linear-gradient(135deg, #b96f89, var(--kids-rose));
+}
+
+.theme-kids .featured-badge {
+  background: var(--kids-yellow);
+  color: var(--kids-green);
+}
+
+.theme-kids .card-click-hint {
+  color: var(--kids-rose-2);
+}
+
+/* =========================================================
+   CAFÉS & BRUNCH
+========================================================= */
+
+.theme-kids #cafes {
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(217, 140, 165, 0.08),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 90% 82%,
+      rgba(142, 184, 207, 0.1),
+      transparent 28%
+    ),
+    var(--kids-cream-2);
+}
+
+.theme-kids .cafe-card {
+  border-color: rgba(45, 90, 39, 0.11);
+}
+
+.theme-kids .cafe-card:hover {
+  box-shadow: 0 12px 32px rgba(71, 82, 66, 0.11);
+}
+
+.theme-kids .cafe-card:nth-child(1) .cafe-accent {
+  background: var(--kids-rose);
+}
+
+.theme-kids .cafe-card:nth-child(2) .cafe-accent {
+  background: var(--kids-blue);
+}
+
+.theme-kids .cafe-card:nth-child(3) .cafe-accent {
+  background: var(--kids-yellow);
+}
+
+.theme-kids .cafe-card:nth-child(4) .cafe-accent {
+  background: var(--kids-green-2);
+}
+
+.theme-kids .cafe-name {
+  color: var(--kids-green);
+}
+
+.theme-kids .cafe-price {
+  color: var(--kids-rose-2);
+}
+
+/* =========================================================
+   ADICIONAIS
+========================================================= */
+
+.theme-kids #adicionais {
+  background: #faf7f1;
+}
+
+.theme-kids .adicional-card {
+  border-color: rgba(45, 90, 39, 0.12);
+}
+
+.theme-kids .adicional-card:nth-child(3n + 1) {
+  box-shadow: inset 0 3px 0 rgba(217, 140, 165, 0.7);
+}
+
+.theme-kids .adicional-card:nth-child(3n + 2) {
+  box-shadow: inset 0 3px 0 rgba(142, 184, 207, 0.72);
+}
+
+.theme-kids .adicional-card:nth-child(3n + 3) {
+  box-shadow: inset 0 3px 0 rgba(227, 198, 111, 0.8);
+}
+
+.theme-kids .adicional-card:hover {
+  border-color: var(--kids-sage);
+}
+
+.theme-kids .adicional-name {
+  color: var(--kids-green);
+}
+
+.theme-kids .adicional-price {
+  color: var(--kids-rose-2);
+}
+
+.theme-kids .adicional-card.adicional-new {
+  border-color: var(--kids-yellow);
+}
+
+.theme-kids .adicional-card.adicional-new::after {
+  color: var(--kids-rose-2);
+}
+
+/* =========================================================
+   BARRA DE OBSERVAÇÕES
+========================================================= */
+
+.theme-kids .obs-bar {
+  background: linear-gradient(90deg, #2b542b 0%, #3e6544 50%, #2b542b 100%);
+
+  border-top: 3px solid rgba(227, 198, 111, 0.85);
+}
+
+/* =========================================================
+   CTA / CONTATO
+========================================================= */
+
+.theme-kids #contato {
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(217, 140, 165, 0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(142, 184, 207, 0.14),
+      transparent 30%
+    ),
+    #f4eee8;
+}
+
+.theme-kids .cta-title {
+  color: var(--kids-green);
+}
+
+.theme-kids .cta-title em {
+  color: var(--kids-rose-2);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.theme-kids footer {
+  background: linear-gradient(135deg, #244b26 0%, #315b35 100%);
+}
+
+.theme-kids .footer-tagline,
+.theme-kids .footer-social {
+  color: #ead99d;
+}
+
+.theme-kids .footer-social:hover {
+  color: white;
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 900px) {
+  .theme-kids .hero-kids {
+    padding-top: 7rem;
+  }
+
+  .theme-kids .hero-kids .hero-title {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .theme-kids .hero-kids-themes {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .theme-kids .hero-kids .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .theme-kids .hero-kids-status {
+    font-size: 0.68rem;
+  }
+
+  .theme-kids .hero-kids-theme {
+    font-size: 0.68rem;
+  }
+
+  .theme-kids .hero-kids .hero-btns {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .theme-kids .hero-kids .hero-btns .btn {
+    justify-content: center;
+  }
+}

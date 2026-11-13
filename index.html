@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="festive.css" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-PL5X01CMZ3"
@@ -32,7 +33,7 @@
       content="3qzKoc7btXutDuB0KGhwdzX-7wyH8hUxTcqrkHWX5cw"
     />
   </head>
-  <body>
+  <body class="festive">
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal" id="modal">
         <button class="modal-close" id="modalClose">✕</button>
@@ -106,6 +107,7 @@
         <span class="nav-logo-text">Alecrim <span>Platters</span></span>
       </a>
       <ul class="nav-links">
+        <li><a href="#especial">Fim de Ano</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#platters">Platters</a></li>
         <li><a href="#cafes">Cafés & Brunch</a></li>
@@ -204,6 +206,117 @@
     </section>
 
     <!-- SOBRE -->
+    <section class="especial" id="especial">
+      <div class="especial-inner">
+        <div class="especial-head">
+          <span class="especial-tag">✦ Edição de Fim de Ano ✦</span>
+          <h2 class="especial-title">Cardápio Especial de Fim de Ano</h2>
+          <p class="especial-sub">
+            Seleção para a ceia, o amigo secreto e a confraternização. Clique em
+            qualquer item para ver os detalhes.
+          </p>
+        </div>
+
+        <div class="especial-grid">
+          <button
+            type="button"
+            class="especial-card"
+            data-target="item-tabua-kg"
+          >
+            <span class="especial-icon">🧀</span>
+            <span class="especial-name">Tábua de Frios por KG</span>
+            <span class="especial-note"
+              >Queijos, charcutarias, nuts e geleia</span
+            >
+            <span class="especial-price">R$ 150 / kg</span>
+            <span class="especial-hint">Ver detalhes</span>
+          </button>
+
+          <button type="button" class="especial-card" data-target="item-brie">
+            <span class="especial-icon">🧀</span>
+            <span class="especial-name">Brie Forma com Mel e Nuts</span>
+            <span class="especial-note">Forma de aproximadamente 1 kg</span>
+            <span class="especial-price">R$ 200</span>
+            <span class="especial-hint">Ver detalhes</span>
+          </button>
+
+          <button
+            type="button"
+            class="especial-card"
+            data-target="item-terrines"
+          >
+            <span class="especial-icon">🏺</span>
+            <span class="especial-name">Terrines</span>
+            <span class="especial-note"
+              >250 g, 350 g ou 550 g, com torradas</span
+            >
+            <span class="especial-price">R$ 100 · R$ 120 · R$ 160</span>
+            <span class="especial-hint">Ver detalhes</span>
+          </button>
+
+          <button type="button" class="especial-card" data-target="item-quiche">
+            <span class="especial-icon">🥧</span>
+            <span class="especial-name">Quiche</span>
+            <span class="especial-note">10 cm ou 28 cm</span>
+            <span class="especial-price">R$ 25 · R$ 100</span>
+            <span class="especial-hint">Ver detalhes</span>
+          </button>
+
+          <button
+            type="button"
+            class="especial-card"
+            data-target="item-burrata"
+          >
+            <span class="especial-icon">⚪️</span>
+            <span class="especial-name">Burrata de Búfala</span>
+            <span class="especial-note">Serve 1 pessoa, cerca de 150 g</span>
+            <span class="especial-price">R$ 35</span>
+            <span class="especial-hint">Ver detalhes</span>
+          </button>
+
+          <button
+            type="button"
+            class="especial-card"
+            data-target="item-capresi"
+          >
+            <span class="especial-icon">🍅</span>
+            <span class="especial-name">Espetinho Capresi no Copo</span>
+            <span class="especial-note">Pedido mínimo de 10 unidades</span>
+            <span class="especial-price">R$ 4 a unidade</span>
+            <span class="especial-hint">Ver detalhes</span>
+          </button>
+
+          <button
+            type="button"
+            class="especial-card"
+            data-target="item-canapes"
+          >
+            <span class="especial-icon">🍢</span>
+            <span class="especial-name">Canapés</span>
+            <span class="especial-note">Pedido mínimo de 10 unidades</span>
+            <span class="especial-price">R$ 3 a unidade</span>
+            <span class="especial-hint">Ver detalhes</span>
+          </button>
+
+          <button
+            type="button"
+            class="especial-card"
+            data-target="item-paozinho"
+          >
+            <span class="especial-icon">🥖</span>
+            <span class="especial-name">Pãozinho Delícia de Uva Passa</span>
+            <span class="especial-note">Pedido mínimo de 30 unidades</span>
+            <span class="especial-price">R$ 1,50 a unidade</span>
+            <span class="especial-hint">Ver detalhes</span>
+          </button>
+        </div>
+
+        <p class="especial-foot">
+          Encomendas de fim de ano com antecedência. Fale com a gente pelo
+          WhatsApp.
+        </p>
+      </div>
+    </section>
     <section id="sobre">
       <div class="sobre-inner">
         <div class="sobre-tag">✦ Quem somos ✦</div>
@@ -521,6 +634,41 @@
               <div class="card-click-hint">Clique para ver detalhes</div>
             </div>
           </div>
+          <!-- <div
+            class="platter-card featured new"
+            onclick="
+              openModal({
+                name: 'Tábua de frios por KG',
+                price: 'R$ 150,00',
+                serves: 'Por KG',
+                category: 'Platter',
+                img: 'img/platters/tabua_kg/tabua_kg_01.jpeg',
+                icon: '🌿',
+                desc: 'Seleção de queijos e charcutarias, mix de nutts, azeitonas ou ovos de codorna e uma geleia de 50g.',
+                ingredients: [
+                  'Seleção de queijos',
+                  'Seleção de charcutarias',
+                  'Azeitonas ou Ovo de Codorna',
+                  'Mix de nuts',
+                  'Geleia da casa de 50g',
+                ],
+              })
+            "
+          >
+            <span class="new-badge">Novo</span>
+            <div class="platter-card-top">
+              <div class="platter-name">Tábua de Frios por KG</div>
+              <div class="platter-serves">Por KG</div>
+              <div class="platter-price">R$ 150</div>
+            </div>
+            <div class="platter-card-body">
+              <p class="platter-desc">
+                Seleção de queijos e charcutarias, mix de nutts, azeitonas ou
+                ovos de codorna e uma geleia de 50g.
+              </p>
+              <div class="card-click-hint">Clique para ver detalhes</div>
+            </div>
+          </div>-->
         </div>
       </div>
     </section>
@@ -538,7 +686,7 @@
             onclick="
               openModal({
                 name: 'Mini Café',
-                price: 'R$ 100,00',
+                price: 'R$ 110,00',
                 serves: 'Serve 1 pessoa',
                 category: 'Café',
                 img: [
@@ -566,7 +714,7 @@
             <div class="cafe-content">
               <div class="cafe-name">Mini Café</div>
               <div class="cafe-meta">
-                <span class="cafe-price">R$ 100,00</span
+                <span class="cafe-price">R$ 110,00</span
                 ><span class="cafe-serves">Serve 1 pessoa</span>
               </div>
               <p class="cafe-desc">
@@ -583,7 +731,7 @@
             onclick="
               openModal({
                 name: 'Café Premium',
-                price: 'R$ 155,00',
+                price: 'R$ 165,00',
                 serves: 'Serve 2 pessoas',
                 category: 'Café',
                 img: [
@@ -617,7 +765,7 @@
             <div class="cafe-content">
               <div class="cafe-name">Café Premium</div>
               <div class="cafe-meta">
-                <span class="cafe-price">R$ 155,00</span
+                <span class="cafe-price">R$ 165,00</span
                 ><span class="cafe-serves">Serve 2 pessoas</span>
               </div>
               <p class="cafe-desc">
@@ -636,7 +784,7 @@
             onclick="
               openModal({
                 name: 'Café Luxo',
-                price: 'R$ 215,00',
+                price: 'R$ 225,00',
                 serves: 'Serve 3 pessoas',
                 category: 'Café',
                 img: 'img/cafes/luxo/luxo_01.jpeg',
@@ -670,7 +818,7 @@
             <div class="cafe-content">
               <div class="cafe-name">Café Luxo</div>
               <div class="cafe-meta">
-                <span class="cafe-price">R$ 215,00</span
+                <span class="cafe-price">R$ 225,00</span
                 ><span class="cafe-serves">Serve 3 pessoas</span>
               </div>
               <p class="cafe-desc">
@@ -690,7 +838,7 @@
             onclick="
               openModal({
                 name: 'Brunch',
-                price: 'R$ 85,00 / pessoa',
+                price: 'R$ 100,00 / pessoa',
                 serves: 'Mínimo 5 pessoas',
                 category: 'Brunch',
                 img: [
@@ -731,7 +879,7 @@
             <div class="cafe-content">
               <div class="cafe-name">Brunch</div>
               <div class="cafe-meta">
-                <span class="cafe-price">R$ 85,00 / pessoa</span
+                <span class="cafe-price">R$ 100,00 / pessoa</span
                 ><span class="cafe-serves">Mínimo 5 pessoas</span>
               </div>
               <p class="cafe-desc">
@@ -760,7 +908,7 @@
             onclick="
               openModal({
                 name: 'Empadão da Gle',
-                price: 'R$ 70,00',
+                price: 'R$ 75,00',
                 serves: '',
                 category: 'Adicional',
                 img: 'img/adicionais/empadao/empadao.jpeg',
@@ -772,7 +920,7 @@
           >
             <div class="adicional-icon">🥧</div>
             <div class="adicional-name">Empadão da Gle</div>
-            <div class="adicional-price">R$ 70,00</div>
+            <div class="adicional-price">R$ 75,00</div>
             <p class="adicional-desc">Frango cremoso ou entulho.</p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
@@ -782,30 +930,27 @@
             onclick="
               openModal({
                 name: 'Terrines',
-                price: 'R$ 90 · R$ 110 · R$ 150',
+                price: 'R$ 100 · R$ 120 · R$ 160',
                 serves: '250g / 350g / 550g',
                 category: 'Adicional',
-                img: [
-                  'img/adicionais/terrines/terrines_01.jpeg',
-                  'img/adicionais/terrines/terrines_02.jpeg',
-                  'img/adicionais/terrines/terrines_03.jpeg',
-                  'img/adicionais/terrines/terrines_04.jpeg',
-                ],
+                img: ['img/adicionais/terrines/terrines_01.jpeg'],
                 icon: '🫙',
-                desc: 'Terrines artesanais em três tamanhos, todas acompanham torradas especiais. Perfeitas para complementar qualquer platter.',
+                desc: 'Terrines artesanais em três tamanhos, todas acompanham torradas especiais , sendo os sabores: tomate seco, gorgonzola com figo ou damasco com presunto parma. Perfeitas para complementar qualquer platter.',
                 ingredients: [
-                  'R$ 90 — 250g com torradas',
-                  'R$ 110 — 350g com torradas',
-                  'R$ 150 — 550g com torradas',
+                  'R$ 100 — 250g com torradas',
+                  'R$ 120 — 350g com torradas',
+                  'R$ 160 — 550g com torradas',
                 ],
               })
             "
           >
             <div class="adicional-icon">🏺</div>
             <div class="adicional-name">Terrines</div>
-            <div class="adicional-price">R$ 90 · R$ 110 · R$ 150</div>
+            <div class="adicional-price">R$ 100 · R$ 120 · R$ 160</div>
             <p class="adicional-desc">
-              250g / 350g / 550g — todas acompanham torradas.
+              250g / 350g / 550g — todas acompanham torradas, sendo os sabores:
+              tomate seco, gorgonzola com figo ou damasco com presunto parma.
+              Perfeitas para complementar qualquer platter.
             </p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
@@ -842,7 +987,7 @@
             onclick="
               openModal({
                 name: 'Focaccia Tradicional',
-                price: 'R$ 40,00',
+                price: 'R$ 50,00',
                 serves: '',
                 category: 'Adicional',
                 img: 'img/adicionais/foccacia_tradicional.jpg',
@@ -854,7 +999,7 @@
           >
             <div class="adicional-icon">🍕</div>
             <div class="adicional-name">Focaccia Tradicional</div>
-            <div class="adicional-price">R$ 40,00</div>
+            <div class="adicional-price">R$ 50,00</div>
             <p class="adicional-desc">Focaccia artesanal assada na hora.</p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
@@ -864,7 +1009,7 @@
             onclick="
               openModal({
                 name: 'Focaccia de Pera com Gorgonzola e Mel',
-                price: 'R$ 60,00',
+                price: 'R$ 70,00',
                 serves: '',
                 category: 'Adicional',
                 img: 'img/adicionais/foccatia_outro.jpg',
@@ -883,7 +1028,7 @@
             <div class="adicional-name">
               Focaccia de Pera com Gorgonzola e Mel
             </div>
-            <div class="adicional-price">R$ 60,00</div>
+            <div class="adicional-price">R$ 70,00</div>
             <p class="adicional-desc">
               Combinação sofisticada de sabores doces e salgados.
             </p>
@@ -949,23 +1094,31 @@
             class="adicional-card"
             onclick="
               openModal({
-                name: 'Quiche de Alho Poró',
-                price: 'R$ 80,00',
-                serves: '',
+                name: 'Quiche',
+                price: 'R$ 25,00 . R$ 100,00',
+                serves: '10cm / 28cm',
                 category: 'Adicional',
                 img: 'img/adicionais/quiche/quiche.jpeg',
                 icon: '🥧',
-                desc: 'Massa artesanal crocante com recheio aveludado de alho-poró e um gratinado dourado irresistível. Perfeita para qualquer ocasião.',
-                ingredients: ['Alho poró', 'Creme de Queijo', 'Bacon'],
+                desc: 'Massa artesanal crocante com recheio aveludado e um gratinado dourado irresistível, sabores: tomate seco ou alho poró. Perfeita para qualquer ocasião.',
+                ingredients: [
+                  'RS25 - 10cm',
+                  'RS100 - 28cm',
+                  'Alho poró',
+                  'Creme de Queijo',
+                  'Bacon',
+                  'Tomate Seco',
+                ],
               })
             "
           >
             <div class="adicional-icon">🥧</div>
-            <div class="adicional-name">Quiche de Alho Poró</div>
-            <div class="adicional-price">R$ 80,00</div>
+            <div class="adicional-name">Quiche</div>
+            <div class="adicional-price">R$ 25 . R$ 100</div>
             <p class="adicional-desc">
-              Massa artesanal crocante com recheio aveludado de alho-poró e um
-              gratinado dourado irresistível. Perfeita para qualquer ocasião.
+              Massa artesanal crocante com recheio aveludado e um gratinado
+              dourado irresistível, sabores: tomate seco ou alho poró. Perfeita
+              para qualquer ocasião.
             </p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
@@ -1000,11 +1153,11 @@
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
           <div
-            class="adicional-card adicional-new"
+            class="adicional-card"
             onclick="
               openModal({
                 name: 'Melba',
-                price: 'R$ 85,00/kg',
+                price: 'R$ 90,00/kg',
                 serves: 'Barquinhas vendidas separadamente',
                 category: 'Adicional',
                 img: [
@@ -1014,7 +1167,7 @@
                 icon: '🍍',
                 desc: 'Creme aveludado à base de cream cheese, combinado com abacaxi caramelizado e acompanhado de crocante de bacon.',
                 ingredients: [
-                  'Melba — R$ 85,00/kg',
+                  'Melba — R$ 90,00/kg',
                   'Caixinha com 40 barquinhas — R$ 30,00',
                 ],
               })
@@ -1022,13 +1175,194 @@
           >
             <div class="adicional-icon">🍍</div>
             <div class="adicional-name">Melba</div>
-            <div class="adicional-price">R$ 85,00/kg</div>
+            <div class="adicional-price">R$ 90,00/kg</div>
             <p class="adicional-desc">
               Creme aveludado à base de cream cheese, com abacaxi caramelizado e
               crocante de bacon.
             </p>
             <div class="card-click-hint">Clique para ver detalhes</div>
           </div>
+          <!--
+          <div
+            class="adicional-card adicional-new"
+            onclick="
+              openModal({
+                name: 'Pãozinho Delícia de Uva Passa',
+                price: 'R$ 1,50 a unidade',
+                serves: 'Pedido mínimo de 30 unidades',
+                category: 'Adicional',
+                img: [
+                  'img/adicionais/paozinho_uva_passa/paozinho_uva_passa_01.jpeg',
+                ],
+                icon: '🥖',
+                desc: 'Pãezinhos artesanais de massa agridoce recheado com uva passa.',
+                ingredients: [
+                  'Pãozinho Delícia de Uva Passa — R$ 1,50 a unidade',
+                  'Pedido mínimo de 30 unidades',
+                ],
+              })
+            "
+          >
+            <div class="adicional-icon">🥖</div>
+            <div class="adicional-name">Pãozinho Delícia de Uva Passa</div>
+            <div class="adicional-price">R$ 1,50 a unidade</div>
+            <p class="adicional-desc">
+              Pãezinhos artesanais de massa agridoce recheado com uva passa.
+            </p>
+            <div class="card-click-hint">Clique para ver detalhes</div>
+          </div>
+
+          <div
+            class="adicional-card adicional-new"
+            onclick="
+              openModal({
+                name: 'Queijo Brie Forma com Mel e Nutts',
+                price: 'R$ 200',
+                serves: '',
+                category: 'Adicional',
+                img: [
+                  'img/adicionais/queijo_brie_mel_nutts/queijo_brie_mel_nutts_01.jpeg',
+                ],
+                icon: '🧀',
+                desc: 'Forma de Queijo Brie de peso apróximado de 1kg com mel e mix nutts.',
+                ingredients: ['Queijo Brie Forma', 'Mel', 'Mix Nutts'],
+              })
+            "
+          >
+            <div class="adicional-icon">🧀</div>
+            <div class="adicional-name">Queijo Brie Forma com Mel e Nutts</div>
+            <div class="adicional-price">R$ 200</div>
+            <p class="adicional-desc">
+              Forma de Queijo Brie de peso apróximado de 1kg com mel e mix
+              nutts.
+            </p>
+            <div class="card-click-hint">Clique para ver detalhes</div>
+          </div>
+
+          <div
+            class="adicional-card adicional-new"
+            onclick="
+              openModal({
+                name: 'Burrata de Búfala',
+                price: 'R$ 35',
+                serves: 'Serve 1 pessoa',
+                category: 'Adicional',
+                img: ['img/adicionais/burrata_buffala/burrata_buffala_01.jpeg'],
+                icon: '⚪️',
+                desc: 'Queijo fresco de origem italiana, feito a pártir de leite de búfala de peso aproximado de 150g.',
+                ingredients: ['Burrata de Búfala'],
+              })
+            "
+          >
+            <div class="adicional-icon">⚪️</div>
+            <div class="adicional-header">
+              <div class="adicional-name">Burrata de Búfala</div>
+              <div class="adicional-serves">Serve 1 pessoa</div>
+            </div>
+            <div class="adicional-price">R$ 35</div>
+            <p class="adicional-desc">
+              Queijo fresco de origem italiana, feito a pártir de leite de
+              búfala de peso aproximado de 150g.
+            </p>
+            <div class="card-click-hint">Clique para ver detalhes</div>
+          </div>
+
+          <div
+            class="adicional-card adicional-new"
+            onclick="
+              openModal({
+                name: 'Espetinho Capresi no Copo',
+                price: 'R$ 4 a unidade',
+                serves: 'Pedido mínimo 10 unidades',
+                category: 'Adicional',
+                img: [
+                  'img/adicionais/espetinho_capresi/espetinho_capresi_01.jpeg',
+                ],
+                icon: '🍅',
+                desc: 'Tomate cereja, manjericão, mussarela de búfala e molho pesto.',
+                ingredients: [
+                  'Tomate cereja',
+                  'Manjericão',
+                  'Mussarela de Búfala',
+                  'Molho Pesto',
+                ],
+              })
+            "
+          >
+            <div class="adicional-icon">🍅</div>
+            <div class="adicional-header">
+              <div class="adicional-name">Tomate Capresi</div>
+            </div>
+            <div class="adicional-price">R$ 4 a unidade</div>
+            <p class="adicional-desc">
+              Tomate cereja, manjericão, mussarela de búfala e molho pesto.
+            </p>
+            <div class="card-click-hint">Clique para ver detalhes</div>
+          </div>
+
+          <div
+            class="adicional-card adicional-new"
+            onclick="
+              openModal({
+                name: 'Canapés',
+                price: 'R$ 3 a unidade',
+                serves: 'Pedido mínimo 10 unidades',
+                category: 'Adicional',
+                img: ['img/adicionais/canapes/canapes_01.jpeg'],
+                icon: '🍢',
+                desc: 'Sabores: Canapé de lombo canadense, queijo provolone e abacaxi e Canapé de pepperoni, queijo minas e uva.',
+                ingredients: [
+                  'Canapé de lombo canadense',
+                  'Canapé de pepperoni',
+                  'Lombo Canadense',
+                  'Queijo Provolone',
+                  'Abacaxi',
+                  'Pepperoni',
+                  'Queijo Minas',
+                  'Uva',
+                ],
+              })
+            "
+          >
+            <div class="adicional-icon">🍢</div>
+            <div class="adicional-header">
+              <div class="adicional-name">Canapés</div>
+            </div>
+            <div class="adicional-price">R$ 3 a unidade</div>
+            <p class="adicional-desc">
+              Sabores: Canapé de lombo canadense, queijo provolone e abacaxi e
+              Canapé de pepperoni, queijo minas e uva.
+            </p>
+            <div class="card-click-hint">Clique para ver detalhes</div>
+          </div>
+
+          <div
+            class="adicional-card adicional-new"
+            onclick="
+              openModal({
+                name: 'Geleia de Abacaxi com Pimenta',
+                price: 'R$ 15',
+                serves: '180g',
+                category: 'Adicional',
+                img: [
+                  'img/adicionais/geleia_abacaxi_pimenta/geleia_abacaxi_pimenta_01.jpeg',
+                ],
+                icon: '🍢',
+                desc: 'Geleia de Abacaxi com Pimenta, receita da casa.',
+                ingredients: ['Geleia de Abacaxi com Pimenta'],
+              })
+            "
+          >
+            <div class="adicional-icon">🍢</div>
+            <div class="adicional-header">
+              <div class="adicional-name">Geleia de Abacaxi com Pimenta</div>
+            </div>
+            <div class="adicional-price">R$ 15</div>
+            <p class="adicional-desc">
+              180g - Geleia de Abacaxi com Pimenta, receita da casa.
+            </p>
+            <div class="card-click-hint">Clique para ver detalhes</div>
+          </div>-->
         </div>
       </div>
     </section>
@@ -1236,6 +1570,118 @@
           if (e.key === "ArrowLeft") prevImage();
           if (e.key === "ArrowRight") nextImage();
         }
+      });
+      // Seção especial de fim de ano
+      const especialItens = {
+        "item-tabua-kg": {
+          name: "Tábua de frios por KG",
+          price: "R$ 150,00",
+          serves: "Por KG",
+          category: "Platter",
+          img: "img/platters/tabua_kg/tabua_kg_01.jpeg",
+          icon: "🌿",
+          desc: "Seleção de queijos e charcutarias, mix de nuts, azeitonas ou ovos de codorna e uma geleia de 50g.",
+          ingredients: [
+            "Seleção de queijos",
+            "Seleção de charcutarias",
+            "Azeitonas ou Ovo de Codorna",
+            "Mix de nuts",
+            "Geleia da casa de 50g",
+          ],
+        },
+        "item-brie": {
+          name: "Queijo Brie Forma com Mel e Nuts",
+          price: "R$ 200",
+          serves: "",
+          category: "Adicional",
+          img: [
+            "img/adicionais/queijo_brie_mel_nutts/queijo_brie_mel_nutts_01.jpeg",
+          ],
+          icon: "🧀",
+          desc: "Forma de Queijo Brie de peso aproximado de 1kg com mel e mix de nuts.",
+          ingredients: ["Queijo Brie Forma", "Mel", "Mix de nuts"],
+        },
+        "item-burrata": {
+          name: "Burrata de Búfala",
+          price: "R$ 35",
+          serves: "Serve 1 pessoa",
+          category: "Adicional",
+          img: ["img/adicionais/burrata_buffala/burrata_buffala_01.jpeg"],
+          icon: "⚪️",
+          desc: "Queijo fresco de origem italiana, feito a partir de leite de búfala, de peso aproximado de 150g.",
+          ingredients: ["Burrata de Búfala"],
+        },
+        "item-capresi": {
+          name: "Espetinho Capresi no Copo",
+          price: "R$ 4 a unidade",
+          serves: "Pedido mínimo 10 unidades",
+          category: "Adicional",
+          img: ["img/adicionais/espetinho_capresi/espetinho_capresi_01.jpeg"],
+          icon: "🍅",
+          desc: "Tomate cereja, manjericão, mussarela de búfala e molho pesto.",
+          ingredients: [
+            "Tomate cereja",
+            "Manjericão",
+            "Mussarela de Búfala",
+            "Molho Pesto",
+          ],
+        },
+        "item-canapes": {
+          name: "Canapés",
+          price: "R$ 3 a unidade",
+          serves: "Pedido mínimo 10 unidades",
+          category: "Adicional",
+          img: ["img/adicionais/canapes/canapes_01.jpeg"],
+          icon: "🍢",
+          desc: "Sabores: Canapé de lombo canadense, queijo provolone e abacaxi e Canapé de pepperoni, queijo minas e uva.",
+          ingredients: [
+            "Canapé de lombo canadense",
+            "Canapé de pepperoni",
+            "Lombo Canadense",
+            "Queijo Provolone",
+            "Abacaxi",
+            "Pepperoni",
+            "Queijo Minas",
+            "Uva",
+          ],
+        },
+        "item-paozinho": {
+          name: "Pãozinho Delícia de Uva Passa",
+          price: "R$ 1,50 a unidade",
+          serves: "Pedido mínimo de 30 unidades",
+          category: "Adicional",
+          img: ["img/adicionais/paozinho_uva_passa/paozinho_uva_passa_01.jpeg"],
+          icon: "🥖",
+          desc: "Pãezinhos artesanais de massa agridoce recheado com uva passa.",
+          ingredients: [
+            "Pãozinho Delícia de Uva Passa — R$ 1,50 a unidade",
+            "Pedido mínimo de 30 unidades",
+          ],
+        },
+      };
+
+      // Terrines e Quiche continuam nas Adicionais: abrimos o card original
+      const especialOriginais = {
+        "item-terrines": "Terrines",
+        "item-quiche": "Quiche",
+      };
+
+      document.querySelectorAll(".especial-card").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const key = btn.dataset.target;
+
+          if (especialItens[key]) {
+            openModal(especialItens[key]);
+            return;
+          }
+
+          const nome = especialOriginais[key];
+          const original = document.querySelector(
+            `.adicional-card[onclick*="name: '${nome}'"]`,
+          );
+          if (original) original.click();
+          else console.warn("Card original não encontrado:", nome);
+        });
       });
     </script>
   </body>

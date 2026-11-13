@@ -1100,3 +1100,74 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+.adicional-serves {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #6b5b4b; /* troque pela cor da sua paleta */
+  background: rgba(107, 91, 75, 0.1);
+  border-radius: 999px;
+}
+/* Garante que o selo se posicione em relação ao card */
+.platter-card.new {
+  position: relative;
+}
+
+/* Selo de novidade */
+.platter-card.new .new-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #c8553d; /* troque pela cor da sua paleta */
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: new-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes new-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+  .platter-card.new .new-badge {
+    animation: none;
+  }
+}
+.adicional-header {
+  display: flex;
+  align-items: center;   /* alinha verticalmente */
+  flex-wrap: wrap;       /* quebra de linha em telas pequenas */
+  gap: 8px 12px;
+}
+
+/* tira a margem de cima que era usada quando ficava empilhado */
+.adicional-serves {
+  margin-top: 0;
+  white-space: nowrap;   /* evita quebrar "Serve 1 pessoa" em duas linhas */
+}
+
+.platter-card.new .new-badge {
+  top: 12px;
+  left: 12px;
+  right: auto;
+}
+.platter-card.new .platter-card-top {
+  padding-top: 44px;
+}
